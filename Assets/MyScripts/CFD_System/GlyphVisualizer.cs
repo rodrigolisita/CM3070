@@ -11,7 +11,7 @@ public class GlyphVisualizer : MonoBehaviour
     [Header("Visualization Settings")]
     public Gradient velocityGradient;
     [Tooltip("A multiplier for the size of the triangles.")]
-    public float glyphScaleMultiplier = 0.07f;
+    public float glyphScaleMultiplier = 0.04f;
     public bool useGlobalMinMax = false;
     public float globalMinVelocity = 0f;
     public float globalMaxVelocity = 2.0f;
@@ -83,16 +83,33 @@ public class GlyphVisualizer : MonoBehaviour
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             glyphInstance.transform.localRotation = Quaternion.Euler(0, 0, angle - 90f);
             
-            SpriteRenderer spriteRenderer = glyphInstance.GetComponent<SpriteRenderer>();
-            if (spriteRenderer != null) 
+            SpriteRenderer[] spriteRenderers = glyphInstance.GetComponentsInChildren<SpriteRenderer>();
+            // Calculate the color once
+            Color glyphColor = velocityGradient.Evaluate((p.velocityMagnitude - minV) / velocityRange);
+            // Apply the same color to every sprite in the prefab
+            foreach (SpriteRenderer sr in spriteRenderers)
             {
-                spriteRenderer.color = velocityGradient.Evaluate((p.velocityMagnitude - minV) / velocityRange);
+                sr.color = glyphColor;
             }
+
+            //SpriteRenderer spriteRenderer = glyphInstance.GetComponent<SpriteRenderer>();
+            //if (spriteRenderer != null) 
+            //{
+            //    spriteRenderer.color = velocityGradient.Evaluate((p.velocityMagnitude - minV) / velocityRange);
+            //}
         }
 
         for (int i = points.Count; i < glyphPool.Count; i++) 
         {
             glyphPool[i].SetActive(false);
+        }
+    }
+
+    public void ClearGlyphs()
+    {
+        foreach (var glyph in glyphPool)
+        {
+            glyph.SetActive(false);
         }
     }
 }

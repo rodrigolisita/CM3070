@@ -7,16 +7,16 @@ using System.Linq;
 public class DataSlicer : MonoBehaviour
 {
     [Header("Slicing Control")]
-    public Slider sliceSlider;
+    public Slider positionSlider;
+    public Slider thicknessSlider; // Slider for thickness
     [Tooltip("The thickness of the slice to be displayed.")]
-    public float sliceThickness = 0.01f;
+    public float sliceThickness = 0.1f;
 
-    // Public properties that the visualizer script will access
     public List<CFD_DataSource.DataPoint> SlicedData { get; private set; } = new List<CFD_DataSource.DataPoint>();
     public event System.Action OnSliceUpdated;
     
     private CFD_DataSource dataSource;
-    private float minZ, maxZ; // To store the Z-range of the data
+    private float minZ, maxZ;
 
     void Awake()
     {
@@ -26,41 +26,53 @@ public class DataSlicer : MonoBehaviour
     private void OnEnable()
     {
         dataSource.OnDataLoaded += OnFullDataLoaded;
+        if (positionSlider != null) positionSlider.onValueChanged.AddListener(OnSlicePositionChanged);
+        if (thicknessSlider != null) thicknessSlider.onValueChanged.AddListener(OnSliceThicknessChanged);
     }
 
     private void OnDisable()
     {
         dataSource.OnDataLoaded -= OnFullDataLoaded;
+        if (positionSlider != null) positionSlider.onValueChanged.RemoveListener(OnSlicePositionChanged);
+        if (thicknessSlider != null) thicknessSlider.onValueChanged.RemoveListener(OnSliceThicknessChanged);
     }
 
-    // This is called once when a new file is loaded
     private void OnFullDataLoaded()
     {
         if (!dataSource.IsDataReady) return;
-
-        // Find the Z-range of the new dataset
         minZ = dataSource.DataPoints.Min(p => p.position.z);
         maxZ = dataSource.DataPoints.Max(p => p.position.z);
+        if (positionSlider != null)
+        {
+            positionSlider.value = 0.5f;
+        }
+        if (thicknessSlider != null)
+        {
+            thicknessSlider.value = 0.1f; // Set a small initial thickness
+        }
 
-        // Update the slider to match the new data
-        sliceSlider.value = 0.5f; // Start in the middle
-        OnSlicePositionChanged(sliceSlider.value);
+        OnSlicePositionChanged(positionSlider.value);
+    }
+    
+    // Function called by the thickness slider
+    public void OnSliceThicknessChanged(float sliderValue)
+    {
+        // Map the slider's 0-1 value to a reasonable range, e.g., 0.001 to 0.1
+        sliceThickness = Mathf.Lerp(0.001f, 0.2f, sliderValue);
+        // Redraw the slice with the new thickness
+        OnSlicePositionChanged(positionSlider.value);
     }
 
-    // This is the public function called by the slider's event
-    public void OnSlicePositionChanged(float sliderValue) // value is 0-1
+    public void OnSlicePositionChanged(float sliderValue)
     {
         if (!dataSource.IsDataReady) return;
-
-        // Convert the slider's 0-1 value to a world Z-coordinate
+        
         float targetZ = Mathf.Lerp(minZ, maxZ, sliderValue);
-
-        // Filter the full dataset to get only the points within the slice
+        
         SlicedData = dataSource.DataPoints.AsParallel().Where(point => 
             Mathf.Abs(point.position.z - targetZ) <= sliceThickness / 2f
         ).ToList();
         
-        // Announce that the new slice is ready for visualization
         OnSliceUpdated?.Invoke();
     }
 }
