@@ -32,6 +32,32 @@ public class CFD_DataSource : MonoBehaviour
         public float velocityMagnitude;
     }
 
+    void Awake()
+    {
+        // Automatically populate the dropdown menu when the scene starts
+        PopulateDropdown();
+    }
+    
+    void PopulateDropdown()
+    {
+        if (dropdown == null) return;
+
+        // Clear any options that were manually added in the Inspector
+        dropdown.ClearOptions();
+
+        // Create a new list of options from our filenames list
+        List<TMP_Dropdown.OptionData> options = new List<TMP_Dropdown.OptionData>();
+        foreach (string filename in simulationFilenames)
+        {
+            // We can clean up the name to make it more user-friendly
+            string friendlyName = Path.GetFileNameWithoutExtension(filename).Replace("_", " ");
+            options.Add(new TMP_Dropdown.OptionData(friendlyName));
+        }
+
+        // Add the new options to the dropdown
+        dropdown.AddOptions(options);
+    }
+
     void Start()
     {
         if (simulationFilenames.Count > 0) { LoadDataFileByIndex(0); }
