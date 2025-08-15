@@ -83,20 +83,20 @@ public class GlyphVisualizer : MonoBehaviour
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             glyphInstance.transform.localRotation = Quaternion.Euler(0, 0, angle - 90f);
             
-            SpriteRenderer[] spriteRenderers = glyphInstance.GetComponentsInChildren<SpriteRenderer>();
+            //SpriteRenderer[] spriteRenderers = glyphInstance.GetComponentsInChildren<SpriteRenderer>();
             // Calculate the color once
-            Color glyphColor = velocityGradient.Evaluate((p.velocityMagnitude - minV) / velocityRange);
+            //Color glyphColor = velocityGradient.Evaluate((p.velocityMagnitude - minV) / velocityRange);
             // Apply the same color to every sprite in the prefab
-            foreach (SpriteRenderer sr in spriteRenderers)
-            {
-                sr.color = glyphColor;
-            }
-
-            //SpriteRenderer spriteRenderer = glyphInstance.GetComponent<SpriteRenderer>();
-            //if (spriteRenderer != null) 
+            //foreach (SpriteRenderer sr in spriteRenderers)
             //{
-            //    spriteRenderer.color = velocityGradient.Evaluate((p.velocityMagnitude - minV) / velocityRange);
+            //    sr.color = glyphColor;
             //}
+
+            SpriteRenderer spriteRenderer = glyphInstance.GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null) 
+            {
+                spriteRenderer.color = velocityGradient.Evaluate((p.velocityMagnitude - minV) / velocityRange);
+            }
         }
 
         for (int i = points.Count; i < glyphPool.Count; i++) 

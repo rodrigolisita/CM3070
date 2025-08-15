@@ -44,11 +44,11 @@ public class DataSlicer : MonoBehaviour
         maxZ = dataSource.DataPoints.Max(p => p.position.z);
         if (positionSlider != null)
         {
-            positionSlider.value = 0.5f;
+            positionSlider.value = 0.0f;
         }
         if (thicknessSlider != null)
         {
-            thicknessSlider.value = 0.1f; // Set a small initial thickness
+            thicknessSlider.value = 0.001f; // Set a small initial thickness
         }
 
         OnSlicePositionChanged(positionSlider.value);
@@ -58,7 +58,9 @@ public class DataSlicer : MonoBehaviour
     public void OnSliceThicknessChanged(float sliderValue)
     {
         // Map the slider's 0-1 value to a reasonable range, e.g., 0.001 to 0.1
-        sliceThickness = Mathf.Lerp(0.001f, 0.2f, sliderValue);
+        //sliceThickness = Mathf.Lerp(0.001f, 0.2f, sliderValue);
+        sliceThickness = Mathf.Lerp(minZ, maxZ, sliderValue);
+
         // Redraw the slice with the new thickness
         OnSlicePositionChanged(positionSlider.value);
     }

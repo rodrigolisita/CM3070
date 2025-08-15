@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VisualizationManager : MonoBehaviour
 {
@@ -7,7 +8,19 @@ public class VisualizationManager : MonoBehaviour
     public GlyphVisualizer glyphVisualizerScript;
     [Tooltip("Drag the ContourPlotVisualizer component here.")]
     public ContourPlotVisualizer contourPlotVisualizerScript;
+
+    [Header("UI Toggles")]
+    public Toggle vectorToggle;
+    public Toggle contourToggle;
     
+    // This function runs once, right at the start of the scene
+    void Start()
+    {
+        // Immediately sync the visualizers to match the initial state of the toggles
+        SetVectorVisibility(vectorToggle.isOn);
+        SetContourPlotVisibility(contourToggle.isOn);
+    }
+
     // This function will be called by the "Show Vectors" UI Toggle
     public void SetVectorVisibility(bool isOn)
     {
@@ -33,22 +46,22 @@ public class VisualizationManager : MonoBehaviour
     // This function will be called by the "Show Contour Plot" UI Toggle
     public void SetContourPlotVisibility(bool isOn)
     {
-    Debug.Log("SetContourPlotVisibility called with value: " + isOn);
+        Debug.Log("SetContourPlotVisibility called with value: " + isOn);
 
-    if (contourPlotVisualizerScript != null)
-    {
-        contourPlotVisualizerScript.enabled = isOn;
-
-        if (contourPlotVisualizerScript.targetRenderer != null)
+        if (contourPlotVisualizerScript != null)
         {
-            contourPlotVisualizerScript.targetRenderer.gameObject.SetActive(isOn);
+            contourPlotVisualizerScript.enabled = isOn;
+    
+            if (contourPlotVisualizerScript.targetRenderer != null)
+            {
+                contourPlotVisualizerScript.targetRenderer.gameObject.SetActive(isOn);
+            }
+    
+            if (isOn)
+            {
+                contourPlotVisualizerScript.GenerateContour();
+            }
         }
-
-        if (isOn)
-        {
-            contourPlotVisualizerScript.GenerateContour();
-        }
-    }
     }
 
 }
