@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 [RequireComponent(typeof(DataSlicer))]
-[RequireComponent(typeof(CFD_DataSource))]
+[RequireComponent(typeof(CFD_DataProvider))]
 public class ContourPlotVisualizer : MonoBehaviour
 {
     [Header("Visualization Target")]
@@ -17,13 +17,13 @@ public class ContourPlotVisualizer : MonoBehaviour
     public float globalMaxVelocity = 2.0f;
 
     private DataSlicer dataSlicer;
-    private CFD_DataSource dataSource;
+    private CFD_DataProvider dataProvider;
     private Texture2D contourTexture;
 
     void Awake()
     {
         dataSlicer = GetComponent<DataSlicer>();
-        dataSource = GetComponent<CFD_DataSource>();
+        dataProvider = GetComponent<CFD_DataProvider>();
         contourTexture = new Texture2D(textureResolution, textureResolution, TextureFormat.RGBA32, false);
         contourTexture.wrapMode = TextureWrapMode.Clamp;
         contourTexture.filterMode = FilterMode.Bilinear;
@@ -32,11 +32,9 @@ public class ContourPlotVisualizer : MonoBehaviour
             targetRenderer.material.mainTexture = contourTexture;
     }
 
-    //void OnEnable() => dataSlicer.OnSliceUpdated += GenerateContour;
     void OnEnable()
     {
         dataSlicer.OnSliceUpdated += GenerateContour;
-        
         // Force an initial draw when the script is enabled,
         // in case we missed the first event from the slicer.
         GenerateContour();
@@ -45,23 +43,22 @@ public class ContourPlotVisualizer : MonoBehaviour
 
     public void GenerateContour()
     {
-        if (!dataSource.IsDataReady || targetRenderer == null)
+        if (!dataProvider.IsDataReady || targetRenderer == null)
             return;
 
-        List<CFD_DataSource.DataPoint> points = dataSlicer.SlicedData;
+        List<DataPoint> points = dataSlicer.SlicedData;
         if (points.Count == 0)
         {
             // If the slice is empty, create a transparent texture
             Color[] clearColors = new Color[textureResolution * textureResolution];
             for (int i = 0; i < clearColors.Length; i++) { clearColors[i] = Color.clear; }
             contourTexture.SetPixels(clearColors);
-            //contourTexture.SetPixels(new Color[textureResolution * textureResolution]);
             contourTexture.Apply();
             return;
         }
 
-        float minV = useGlobalMinMax ? globalMinVelocity : dataSource.MinVelocity;
-        float maxV = useGlobalMinMax ? globalMaxVelocity : dataSource.MaxVelocity;
+        float minV = useGlobalMinMax ? globalMinVelocity : dataProvider.MinVelocity;
+        float maxV = useGlobalMinMax ? globalMaxVelocity : dataProvider.MaxVelocity;
         float velocityRange = Mathf.Max(maxV - minV, 0.001f);
 
         float minX = points.Min(p => p.position.x);
@@ -73,7 +70,7 @@ public class ContourPlotVisualizer : MonoBehaviour
         float cellSizeX = (maxX - minX) / textureResolution;
         float cellSizeY = (maxY - minY) / textureResolution;
 
-        Dictionary<(int, int), List<CFD_DataSource.DataPoint>> gridMap = new();
+        Dictionary<(int, int), List<DataPoint>> gridMap = new();
         foreach (var point in points)
         {
             int gx = Mathf.FloorToInt((point.position.x - minX) / cellSizeX);
@@ -82,7 +79,7 @@ public class ContourPlotVisualizer : MonoBehaviour
 
             if (!gridMap.TryGetValue(key, out var bin))
             {
-                bin = new List<CFD_DataSource.DataPoint>();
+                bin = new List<DataPoint>();
                 gridMap[key] = bin;
             }
             bin.Add(point);
@@ -108,7 +105,7 @@ public class ContourPlotVisualizer : MonoBehaviour
                 int gy = Mathf.FloorToInt((py - minY) / cellSizeY);
                 Vector3 pixelWorldPos = new Vector3(px, py, zPos);
 
-                List<CFD_DataSource.DataPoint> candidates = new();
+                List<DataPoint> candidates = new();
                 for (int dx = -1; dx <= 1; dx++)
                     for (int dy = -1; dy <= 1; dy++)
                         if (gridMap.TryGetValue((gx + dx, gy + dy), out var list))

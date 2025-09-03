@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(DataSlicer))]
-[RequireComponent(typeof(CFD_DataSource))]
+[RequireComponent(typeof(CFD_DataProvider))]
 public class GlyphVisualizer : MonoBehaviour
 {
     [Header("Visualization Target")]
@@ -16,14 +16,14 @@ public class GlyphVisualizer : MonoBehaviour
     public float globalMinVelocity = 0f;
     public float globalMaxVelocity = 2.0f;
     
-    private CFD_DataSource mainDataSource;
+    private CFD_DataProvider dataProvider;
     private List<GameObject> glyphPool = new List<GameObject>();
     private float prev_glyphScaleMultiplier;
     private DataSlicer dataSlicer;
 
     void Awake() 
     {
-        mainDataSource = GetComponent<CFD_DataSource>();
+        dataProvider = GetComponent<CFD_DataProvider>();
         dataSlicer = GetComponent<DataSlicer>();
     }
 
@@ -52,11 +52,11 @@ public class GlyphVisualizer : MonoBehaviour
         prev_glyphScaleMultiplier = glyphScaleMultiplier;
 
         // Get the SLICED data to draw from the slicer
-        List<CFD_DataSource.DataPoint> points = dataSlicer.SlicedData;
+        List<DataPoint> points = dataSlicer.SlicedData;
 
         // Use the min/max from the FULL dataset for consistent colors across all slices
-        float minV = useGlobalMinMax ? globalMinVelocity : mainDataSource.MinVelocity;
-        float maxV = useGlobalMinMax ? globalMaxVelocity : mainDataSource.MaxVelocity;
+        float minV = useGlobalMinMax ? globalMinVelocity : dataProvider.MinVelocity;
+        float maxV = useGlobalMinMax ? globalMaxVelocity : dataProvider.MaxVelocity;
         float velocityRange = Mathf.Max(maxV - minV, 0.001f);
 
         // This loop operates on the smaller, sliced list
@@ -83,15 +83,6 @@ public class GlyphVisualizer : MonoBehaviour
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             glyphInstance.transform.localRotation = Quaternion.Euler(0, 0, angle - 90f);
             
-            //SpriteRenderer[] spriteRenderers = glyphInstance.GetComponentsInChildren<SpriteRenderer>();
-            // Calculate the color once
-            //Color glyphColor = velocityGradient.Evaluate((p.velocityMagnitude - minV) / velocityRange);
-            // Apply the same color to every sprite in the prefab
-            //foreach (SpriteRenderer sr in spriteRenderers)
-            //{
-            //    sr.color = glyphColor;
-            //}
-
             SpriteRenderer spriteRenderer = glyphInstance.GetComponent<SpriteRenderer>();
             if (spriteRenderer != null) 
             {

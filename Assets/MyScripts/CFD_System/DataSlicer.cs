@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
 
-[RequireComponent(typeof(CFD_DataSource))]
+[RequireComponent(typeof(CFD_DataProvider))]
 public class DataSlicer : MonoBehaviour
 {
     [Header("Slicing Control")]
@@ -12,36 +12,36 @@ public class DataSlicer : MonoBehaviour
     [Tooltip("The thickness of the slice to be displayed.")]
     public float sliceThickness = 0.1f;
 
-    public List<CFD_DataSource.DataPoint> SlicedData { get; private set; } = new List<CFD_DataSource.DataPoint>();
+    public List<DataPoint> SlicedData { get; private set; } = new List<DataPoint>();
     public event System.Action OnSliceUpdated;
     
-    private CFD_DataSource dataSource;
+    private CFD_DataProvider dataProvider;
     private float minZ, maxZ;
 
     void Awake()
     {
-        dataSource = GetComponent<CFD_DataSource>();
+        dataProvider = GetComponent<CFD_DataProvider>();
     }
 
     private void OnEnable()
     {
-        dataSource.OnDataLoaded += OnFullDataLoaded;
+        dataProvider.OnDataLoaded += OnFullDataLoaded;
         if (positionSlider != null) positionSlider.onValueChanged.AddListener(OnSlicePositionChanged);
         if (thicknessSlider != null) thicknessSlider.onValueChanged.AddListener(OnSliceThicknessChanged);
     }
 
     private void OnDisable()
     {
-        dataSource.OnDataLoaded -= OnFullDataLoaded;
+        dataProvider.OnDataLoaded -= OnFullDataLoaded;
         if (positionSlider != null) positionSlider.onValueChanged.RemoveListener(OnSlicePositionChanged);
         if (thicknessSlider != null) thicknessSlider.onValueChanged.RemoveListener(OnSliceThicknessChanged);
     }
 
     private void OnFullDataLoaded()
     {
-        if (!dataSource.IsDataReady) return;
-        minZ = dataSource.DataPoints.Min(p => p.position.z);
-        maxZ = dataSource.DataPoints.Max(p => p.position.z);
+        if (!dataProvider.IsDataReady) return;
+        minZ = dataProvider.DataPoints.Min(p => p.position.z);
+        maxZ = dataProvider.DataPoints.Max(p => p.position.z);
         if (positionSlider != null)
         {
             positionSlider.value = 0.0f;
@@ -67,11 +67,11 @@ public class DataSlicer : MonoBehaviour
 
     public void OnSlicePositionChanged(float sliderValue)
     {
-        if (!dataSource.IsDataReady) return;
+        if (!dataProvider.IsDataReady) return;
         
         float targetZ = Mathf.Lerp(minZ, maxZ, sliderValue);
         
-        SlicedData = dataSource.DataPoints.AsParallel().Where(point => 
+        SlicedData = dataProvider.DataPoints.AsParallel().Where(point => 
             Mathf.Abs(point.position.z - targetZ) <= sliceThickness / 2f
         ).ToList();
         
