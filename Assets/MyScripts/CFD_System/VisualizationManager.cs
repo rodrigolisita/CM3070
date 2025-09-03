@@ -12,6 +12,9 @@ public class VisualizationManager : MonoBehaviour
     [Header("UI Toggles")]
     public Toggle vectorToggle;
     public Toggle contourToggle;
+
+    [Header("Scale Multiplier")]
+    public int scaleMultiplier;
     
     // This function runs once, right at the start of the scene
     void Start()
@@ -19,6 +22,7 @@ public class VisualizationManager : MonoBehaviour
         // Immediately sync the visualizers to match the initial state of the toggles
         SetVectorVisibility(vectorToggle.isOn);
         SetContourPlotVisibility(contourToggle.isOn);
+        SetScale(scaleMultiplier);
     }
 
     // This function will be called by the "Show Vectors" UI Toggle
@@ -62,6 +66,14 @@ public class VisualizationManager : MonoBehaviour
                 contourPlotVisualizerScript.GenerateContour();
             }
         }
+    }
+
+    // This function will be called by your 1x, 2x, and 5x toggles.
+    public void SetScale(float scaleMultiplier)
+    {
+        // 'transform' here refers to the CFD_Visualizer's transform,
+        // since this script is attached to it.
+        transform.localScale = new Vector3(scaleMultiplier, scaleMultiplier, scaleMultiplier);
     }
 
 }
