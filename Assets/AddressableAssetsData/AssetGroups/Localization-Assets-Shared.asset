@@ -15,6 +15,16 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: e3fe73d43c4920b408db45d33ed548bf
   m_SerializeEntries:
+  - m_GUID: 0390462888211f14ba41ae67ee278d9f
+    m_Address: Assets/Localization/Teste Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2fbec87f4cc3174885dd11ddd4f68fe
+    m_Address: Assets/Localization/Experiment_FallingBodies Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b7c24502cc51eec4f9d865312028932d
     m_Address: Assets/Localization/UI_Text Shared Data.asset
     m_ReadOnly: 1

@@ -15,8 +15,20 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Portuguese (pt)
   m_GUID: 13a19f4a43852cf439b24d348d977f5c
   m_SerializeEntries:
+  - m_GUID: 024654e109f77044a81f3eb961b21fea
+    m_Address: Teste_pt
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c78def5e955907d489aa831247d7cd1b
     m_Address: UI_Text_pt
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f56d6c9cba9b5a84dbbdf7001e1551f4
+    m_Address: Experiment_FallingBodies_pt
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-pt
