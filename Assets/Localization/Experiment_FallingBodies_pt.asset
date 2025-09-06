@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Experiment_FallingBodies_pt
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt
+  m_SharedData: {fileID: 11400000, guid: b2fbec87f4cc3174885dd11ddd4f68fe, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 13578588160
+    m_Localized: "Bem-vindo ao Laborat\xF3rio Virtual de Engenharia. Neste m\xF3dulo,
+      exploramos uma das quest\xF5es mais fundamentais da f\xEDsica: o que acontece
+      quando os objetos caem?\n\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1815585804288
+    m_Localized: "S\xE9culos atr\xE1s, Arist\xF3teles acreditava que objetos mais
+      pesados ca\xEDam mais r\xE1pido do que os mais leves. Suas ideias dominaram
+      a ci\xEAncia por quase dois mil\xEAnios \u2014 at\xE9 que Galileu Galilei as
+      desafiou. Por meio de experimentos ousados, Galileu descobriu que \u2014 na
+      aus\xEAncia de resist\xEAncia do ar \u2014 todos os corpos caem na mesma velocidade,
+      independentemente de sua massa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3181821612032
+    m_Localized: "Nesta cena virtual, voc\xEA ir\xE1 observar e interagir com corpos
+      em queda sob diferentes condi\xE7\xF5es. Exploraremos as for\xE7as que governam
+      esse movimento:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53297936912384
+    m_Localized: "A gravidade, for\xE7a que atrai os corpos para o centro da Terra.
+      A resist\xEAncia do ar, que age contra o movimento dos objetos. E a for\xE7a
+      de empuxo, que pode contrabalan\xE7ar a gravidade em meios fluidos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53375074357248
+    m_Localized: "Ao experimentar com diferentes formas, materiais e ambientes, voc\xEA
+      ver\xE1 como essas for\xE7as se combinam para influenciar o movimento \u2014
+      e por que uma pena cai de forma diferente de um martelo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53431647129600
+    m_Localized: "Prepare-se para desafiar suposi\xE7\xF5es, testar teorias e vivenciar
+      a f\xEDsica dos corpos em queda como nunca antes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61898185297920
+    m_Localized: "Introdu\xE7\xE3o ao Experimento: Corpos em Queda"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 341667271462912
+    m_Localized: Objetivos de Aprendizagem
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

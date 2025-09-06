@@ -2419,9 +2419,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:0390462888211f14ba41ae67ee278d9f
+      m_TableCollectionName: GUID:a61dce0461488664a8c7be8d16cae8e4
     m_TableEntryReference:
-      m_KeyId: 15784648167424
+      m_KeyId: 130788413440
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -5399,9 +5399,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:0390462888211f14ba41ae67ee278d9f
+      m_TableCollectionName: GUID:a61dce0461488664a8c7be8d16cae8e4
     m_TableEntryReference:
-      m_KeyId: 15706604752896
+      m_KeyId: 22579564544
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
