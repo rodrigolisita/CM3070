@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/FallingObjects_ExperimentSelector.unity
     guid: f3027101a66322c4d986dc66a16609cc
   - enabled: 1
+    path: Assets/Scenes/FallingObjects_Forces.unity
+    guid: b802d52f3b9333d4cabef38bedc7954b
+  - enabled: 1
     path: Assets/Scenes/Rodrigo Room 1.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
