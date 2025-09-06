@@ -61,7 +61,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 341667271462912
-    m_Localized: Objetivos de Aprendizagem
+    m_Localized: "Laborat\xF3rio de Queda Livre\nExplore o movimento dos objetos
+      sob a a\xE7\xE3o da gravidade. Me\xE7a, analise e compreenda como a acelera\xE7\xE3o
+      afeta os corpos em queda."
     m_Metadata:
       m_Items: []
   references:

@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Experiment_FallingBodies_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: b2fbec87f4cc3174885dd11ddd4f68fe, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 13578588160
+    m_Localized: 'Welcome to the Virtual Reality Engineering Laboratory. In this
+      module, we explore one of the most fundamental questions in physics: What happens
+      when objects fall?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1815585804288
+    m_Localized: "Centuries ago, Aristotle believed that heavier objects fall faster
+      than lighter ones. His ideas shaped science for nearly 2,000 years\u2014until
+      Galileo Galilei challenged them. Through bold experiments, Galileo discovered
+      that\u2014without air resistance\u2014all objects fall at the same rate, regardless
+      of their mass."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3181821612032
+    m_Localized: "In this virtual scene, you\u2019ll observe and interact with falling
+      bodies under different conditions. You\u2019ll explore the forces that govern
+      their motion:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53297936912384
+    m_Localized: Gravity, the force that pulls objects toward Earth. Drag, the resistance
+      caused by air as objects move through it. And Buoyancy, the upward force exerted
+      by fluids that can counteract gravity.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53375074357248
+    m_Localized: "By experimenting with different shapes, materials, and environments,
+      you\u2019ll see how these forces combine to influence motion\u2014and why a
+      feather falls differently from a hammer."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53431647129600
+    m_Localized: Get ready to challenge assumptions, test theories, and experience
+      the physics of falling bodies like never before.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61898185297920
+    m_Localized: 'Introduction: The Physics of Falling Bodies'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 341667271462912
+    m_Localized: 'Falling Bodies Laboratory
+
+      Explore the motion of objects
+      under gravity. Measure, analyze, and understand how acceleration affects falling
+      bodies.'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
