@@ -67,6 +67,43 @@ MonoBehaviour:
       bodies.'
     m_Metadata:
       m_Items: []
+  - m_Id: 427017285193728
+    m_Localized: 'Explore the forces acting on a falling body: gravity, air resistance,
+      and buoyancy. Adjust mass and diameter to see how these forces change in real
+      time.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 427107840217088
+    m_Localized: Compare the fall of spheres with the same mass but different sizes.
+      Discover how the diameter affects air resistance and the speed of fall.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 427288023322624
+    m_Localized: Observe how shape and size influence movement. Cubes with the same
+      mass but different volumes reveal the role of shape in aerodynamics.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 427396706127872
+    m_Localized: Try dropping spheres in water, oil, and air. See how the density
+      of the fluid changes the buoyancy and resistance, modifying the fall time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 428650605891584
+    m_Localized: Learn about the forces
+    m_Metadata:
+      m_Items: []
+  - m_Id: 428794109808640
+    m_Localized: Spheres with different diameters
+    m_Metadata:
+      m_Items: []
+  - m_Id: 428962821492736
+    m_Localized: Cubes with different sizes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 429087140663296
+    m_Localized: Spheres in different fluids
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

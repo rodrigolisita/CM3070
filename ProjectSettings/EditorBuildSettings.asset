@@ -12,8 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/LabSelectionScene.unity
     guid: d9f8e2a3022648d40bfd48410bcb80cc
   - enabled: 1
-    path: Assets/Scenes/LabSelectionScene_FallingObjects.unity
+    path: Assets/Scenes/FallingObjects_Introduction.unity
     guid: a3766606cdce9554b987e9ea5ec5e5e7
+  - enabled: 1
+    path: Assets/Scenes/FallingObjects_ExperimentSelector.unity
+    guid: f3027101a66322c4d986dc66a16609cc
   - enabled: 1
     path: Assets/Scenes/Rodrigo Room 1.unity
     guid: 99c9720ab356a0642a771bea13969a05

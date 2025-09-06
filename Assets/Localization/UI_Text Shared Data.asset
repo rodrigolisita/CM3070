@@ -35,6 +35,10 @@ MonoBehaviour:
     m_Key: title_message
     m_Metadata:
       m_Items: []
+  - m_Id: 714287166836736
+    m_Key: button_GoToExperiment
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

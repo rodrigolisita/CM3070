@@ -38,6 +38,10 @@ MonoBehaviour:
     m_Localized: Virtual Reality Engineering Laboratory
     m_Metadata:
       m_Items: []
+  - m_Id: 714287166836736
+    m_Localized: Go to Experiment
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

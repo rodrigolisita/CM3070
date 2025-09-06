@@ -993,7 +993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &107319090
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1022,9 +1022,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 107319089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebb070c41298a9a419d2c078d51cf032, type: 3}
+  m_Script: {fileID: 11500000, guid: 43fa4c49a0ca5474a994a8462a1f41d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textMesh: {fileID: 107319093}
 --- !u!114 &107319092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2459,7 +2460,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continuar
+  m_text: Ir para Experimento
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 500c8b014e8c041b8982d40b1db00225, type: 2}
   m_sharedMaterial: {fileID: -6674944201535329505, guid: 500c8b014e8c041b8982d40b1db00225,
@@ -2984,14 +2985,13 @@ GameObject:
   - component: {fileID: 363183142}
   - component: {fileID: 363183145}
   - component: {fileID: 363183144}
-  - component: {fileID: 363183143}
   m_Layer: 0
   m_Name: StoryManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &363183142
 Transform:
   m_ObjectHideFlags: 0
@@ -3007,18 +3007,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1916793998}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &363183143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363183141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9592fbe9ed4e4f4f84c9dd1c9ef20ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &363183144
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3125,9 +3113,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 363183141}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72b6933a80b1b0d4eb9f564349c0801d, type: 3}
+  m_Script: {fileID: 11500000, guid: a4ca173ef9c2975478a9f058e32d218e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textPrefab: {fileID: 873241170473142135, guid: 2766915fedbc7a745b92c12d9fa407f1,
+    type: 3}
+  contentParent: {fileID: 105026350}
+  scrollRect: {fileID: 1561983093}
+  storyParagraphs:
+  - localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+      m_TableEntryReference:
+        m_KeyId: 341667271462912
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    charsPerSecond: 20
+    delayAfter: 0
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &364578160
 GameObject:
   m_ObjectHideFlags: 0
@@ -3761,6 +3768,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LanguageManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869437518274570398, guid: 3e714f95bf853ee409506372479523ab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9039918565200127639, guid: 3e714f95bf853ee409506372479523ab,
         type: 3}
@@ -6779,7 +6791,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869343609}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6788,7 +6800,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -113.4, y: -85}
+  m_AnchoredPosition: {x: -112.7, y: -84.6}
   m_SizeDelta: {x: 40, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &869343611
@@ -9785,6 +9797,7 @@ GameObject:
   - component: {fileID: 1252932715}
   - component: {fileID: 1252932714}
   - component: {fileID: 1252932713}
+  - component: {fileID: 1252932720}
   m_Layer: 0
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -9800,7 +9813,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252932711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9809,8 +9822,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 96.6, y: -85}
-  m_SizeDelta: {x: 57, y: 20}
+  m_AnchoredPosition: {x: 87.5, y: -83.2}
+  m_SizeDelta: {x: 80, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1252932713
 MonoBehaviour:
@@ -9940,7 +9953,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:b7c24502cc51eec4f9d865312028932d
     m_TableEntryReference:
-      m_KeyId: 688241340108800
+      m_KeyId: 714287166836736
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -10021,9 +10034,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1222018284}
-        m_TargetAssemblyTypeName: ScreenTransitionManager, Assembly-CSharp
-        m_MethodName: GoToPreviousPage
+      - m_Target: {fileID: 1252932720}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadTargetScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10083,6 +10096,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252932711}
   m_CullTransparentMesh: 1
+--- !u!114 &1252932720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252932711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b6d37ee082d82478af7004baa54588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneNameToLoad: FallingObjects_ExperimentSelector
 --- !u!1 &1272585743
 GameObject:
   m_ObjectHideFlags: 0
@@ -12006,7 +12032,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1561983093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14213,7 +14239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1916793998
 RectTransform:
   m_ObjectHideFlags: 0

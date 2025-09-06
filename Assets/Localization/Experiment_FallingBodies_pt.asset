@@ -66,6 +66,45 @@ MonoBehaviour:
       afeta os corpos em queda."
     m_Metadata:
       m_Items: []
+  - m_Id: 427017285193728
+    m_Localized: "Explore os vetores de for\xE7a que atuam sobre um corpo em queda:
+      gravidade, resist\xEAncia do ar e empuxo. Ajuste massa e di\xE2metro para ver
+      como essas for\xE7as mudam em tempo real."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 427107840217088
+    m_Localized: "Compare a queda de esferas com mesma massa, mas tamanhos diferentes.
+      Descubra como o di\xE2metro afeta a resist\xEAncia do ar e a velocidade de
+      queda."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 427288023322624
+    m_Localized: "Observe como a forma e o tamanho influenciam o movimento. Cubos
+      com mesma massa, mas volumes distintos, revelam o papel do formato na aerodin\xE2mica."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 427396706127872
+    m_Localized: "Experimente a queda de esferas em \xE1gua, \xF3leo e ar. Veja como
+      a densidade do fluido altera o empuxo e a resist\xEAncia, modificando o tempo
+      de queda."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 428650605891584
+    m_Localized: "Aprenda as for\xE7as"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 428794109808640
+    m_Localized: "Esferas com diferentes di\xE2metros"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 428962821492736
+    m_Localized: Cubos de diferentes tamanhos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 429087140663296
+    m_Localized: Esferas em diferentes fluidos
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

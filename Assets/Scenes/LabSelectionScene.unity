@@ -7842,7 +7842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b6d37ee082d82478af7004baa54588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNameToLoad: LabSelectionScene_FallingObjects
+  sceneNameToLoad: FallingObjects_Introduction
 --- !u!114 &1246699433
 MonoBehaviour:
   m_ObjectHideFlags: 0

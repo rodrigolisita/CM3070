@@ -38,6 +38,10 @@ MonoBehaviour:
     m_Localized: "Laborat\xF3rio Virtual de Engenharia"
     m_Metadata:
       m_Items: []
+  - m_Id: 714287166836736
+    m_Localized: Ir para Experimento
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

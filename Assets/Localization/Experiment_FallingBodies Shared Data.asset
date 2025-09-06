@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Experiment_FallingBodies Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Experiment_FallingBodies
+  m_TableCollectionNameGuidString: b2fbec87f4cc3174885dd11ddd4f68fe
+  m_Entries:
+  - m_Id: 13578588160
+    m_Key: introduction_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1815585804288
+    m_Key: introduction_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3181821612032
+    m_Key: introduction_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53297936912384
+    m_Key: introduction_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53375074357248
+    m_Key: introduction_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53431647129600
+    m_Key: introduction_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61898185297920
+    m_Key: Introduction_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 341667271462912
+    m_Key: learning_objectives
+    m_Metadata:
+      m_Items: []
+  - m_Id: 427017285193728
+    m_Key: tooltip_ExpForces
+    m_Metadata:
+      m_Items: []
+  - m_Id: 427107840217088
+    m_Key: tooltip_Exp_SpheresDifferentDiameters
+    m_Metadata:
+      m_Items: []
+  - m_Id: 427288023322624
+    m_Key: tooltip_ExpCubes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 427396706127872
+    m_Key: tooltip_ExpSpheresDifferentFluids
+    m_Metadata:
+      m_Items: []
+  - m_Id: 428650605891584
+    m_Key: button_Exp_Forces
+    m_Metadata:
+      m_Items: []
+  - m_Id: 428794109808640
+    m_Key: button_Exp_SpheresDifferentDiameters
+    m_Metadata:
+      m_Items: []
+  - m_Id: 428962821492736
+    m_Key: button_Exp_Cubes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 429087140663296
+    m_Key: button_Exp_SpheresDifferentFluids
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 876655041692303441
+  references:
+    version: 2
+    RefIds:
+    - rid: 876655041692303441
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1757083994280
