@@ -27,6 +27,14 @@ MonoBehaviour:
     m_Key: test3
     m_Metadata:
       m_Items: []
+  - m_Id: 15706604752896
+    m_Key: EXP_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15784648167424
+    m_Key: EXP_CFD
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
