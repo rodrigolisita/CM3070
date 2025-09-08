@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: e3fe73d43c4920b408db45d33ed548bf
   m_SerializeEntries:
+  - m_GUID: 44d820f2a64b0334b858f58d8e8956a0
+    m_Address: Assets/Localization/NarrationAudio_Tables Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a61dce0461488664a8c7be8d16cae8e4
     m_Address: Assets/Localization/ExperimentList Shared Data.asset
     m_ReadOnly: 1
