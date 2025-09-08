@@ -8,6 +8,9 @@ using UnityEngine.Localization;
 [System.Serializable]
 public class StoryLine
 {
+    [Tooltip("The portrait image to display for this speaker.")]
+    public Sprite characterPortrait;
+
     [Tooltip("The localized text content for this line.")]
     public LocalizedString localizedText;
 

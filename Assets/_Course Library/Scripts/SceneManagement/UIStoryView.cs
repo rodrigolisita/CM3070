@@ -24,7 +24,7 @@ public class UIStoryView : MonoBehaviour
 
     private TypewriterTextAnim currentTypewriter;
 
-    // --- NEW CODE START ---
+    
     void Awake()
     {
         // Auto-find ScrollRect in children
@@ -47,7 +47,6 @@ public class UIStoryView : MonoBehaviour
             }
         }
     }
-    // --- NEW CODE END ---
 
     /// <summary>
     /// Displays a single line of text with a typewriter effect.
@@ -58,6 +57,24 @@ public class UIStoryView : MonoBehaviour
         GameObject newTextInstance = Instantiate(textPrefab, contentParent);
         LocalizeStringEvent localizeEvent = newTextInstance.GetComponent<LocalizeStringEvent>();
         currentTypewriter = newTextInstance.GetComponent<TypewriterTextAnim>();
+
+        // Find the Image component on the prefab instance (assumes there's only one)
+        PortraitReference portraitRef = newTextInstance.GetComponentInChildren<PortraitReference>();
+
+        if (portraitRef != null)
+        {
+            Image portraitImageComponent = portraitRef.GetComponent<Image>(); // Get Image component from the tagged object
+
+            if (line.characterPortrait != null)
+            {
+                portraitImageComponent.sprite = line.characterPortrait;
+                portraitImageComponent.enabled = true;
+            }
+            else
+            {
+                portraitImageComponent.enabled = false;
+            }
+        }
 
         // 2. Load localized text asynchronously
         bool hasTextLoaded = false;
