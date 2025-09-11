@@ -3011,16 +3011,37 @@ MonoBehaviour:
   scrollRect: {fileID: 1561983093}
   storyParagraphs:
   - localizedString:
+      m_Dirty: 1
+      m_UpdateTrigger: 0
+      <property>k__BackingField: 
       m_TableReference:
         m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 1
       m_TableEntryReference:
         m_KeyId: 341667271462912
         m_Key: 
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 2
       m_FallbackState: 0
       m_WaitForCompletion: 0
+      m_LocaleOverride: {fileID: 0}
+      m_CurrentTable:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 1
+      m_CurrentTableEntry:
+        m_KeyId: 341667271462912
+        m_Key: 
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 2
+      m_ActivatedCount: 0
       m_LocalVariables: []
+      m_CurrentStringChangedValue: 
+      m_WaitingForVariablesEndUpdate: 0
     charsPerSecond: 20
     delayAfter: 0
+  currentTypewriter: {fileID: 0}
   references:
     version: 2
     RefIds: []
@@ -3645,79 +3666,6 @@ MonoBehaviour:
   OnRelease:
     m_PersistentCalls:
       m_Calls: []
---- !u!1001 &369755020
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5869437518274570398, guid: 3e714f95bf853ee409506372479523ab,
-        type: 3}
-      propertyPath: m_Name
-      value: LanguageManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5869437518274570398, guid: 3e714f95bf853ee409506372479523ab,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9039918565200127639, guid: 3e714f95bf853ee409506372479523ab,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.2444816
-      objectReference: {fileID: 0}
-    - target: {fileID: 9039918565200127639, guid: 3e714f95bf853ee409506372479523ab,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.7606323
-      objectReference: {fileID: 0}
-    - target: {fileID: 9039918565200127639, guid: 3e714f95bf853ee409506372479523ab,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.5166802
-      objectReference: {fileID: 0}
-    - target: {fileID: 9039918565200127639, guid: 3e714f95bf853ee409506372479523ab,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9039918565200127639, guid: 3e714f95bf853ee409506372479523ab,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9039918565200127639, guid: 3e714f95bf853ee409506372479523ab,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9039918565200127639, guid: 3e714f95bf853ee409506372479523ab,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9039918565200127639, guid: 3e714f95bf853ee409506372479523ab,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9039918565200127639, guid: 3e714f95bf853ee409506372479523ab,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9039918565200127639, guid: 3e714f95bf853ee409506372479523ab,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3e714f95bf853ee409506372479523ab, type: 3}
 --- !u!1001 &379617573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4644,6 +4592,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 191620863}
+  - {fileID: 1125200637}
   m_Father: {fileID: 1227200689}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -8390,7 +8339,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 695081462}
-  - {fileID: 1125200637}
   m_Father: {fileID: 897301837}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -9726,71 +9674,192 @@ MonoBehaviour:
   scrollRect: {fileID: 1983082545}
   storyParagraphs:
   - localizedString:
+      m_Dirty: 1
+      m_UpdateTrigger: 0
+      <property>k__BackingField: 
       m_TableReference:
         m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 1
       m_TableEntryReference:
         m_KeyId: 13578588160
         m_Key: 
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 2
       m_FallbackState: 0
       m_WaitForCompletion: 0
+      m_LocaleOverride: {fileID: 0}
+      m_CurrentTable:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 1
+      m_CurrentTableEntry:
+        m_KeyId: 13578588160
+        m_Key: 
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 2
+      m_ActivatedCount: 0
       m_LocalVariables: []
+      m_CurrentStringChangedValue: 
+      m_WaitingForVariablesEndUpdate: 0
     charsPerSecond: 14
     delayAfter: 1.5
   - localizedString:
+      m_Dirty: 1
+      m_UpdateTrigger: 0
+      <property>k__BackingField: 
       m_TableReference:
         m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 1
       m_TableEntryReference:
         m_KeyId: 1815585804288
         m_Key: 
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 2
       m_FallbackState: 0
       m_WaitForCompletion: 0
+      m_LocaleOverride: {fileID: 0}
+      m_CurrentTable:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 1
+      m_CurrentTableEntry:
+        m_KeyId: 1815585804288
+        m_Key: 
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 2
+      m_ActivatedCount: 0
       m_LocalVariables: []
+      m_CurrentStringChangedValue: 
+      m_WaitingForVariablesEndUpdate: 0
     charsPerSecond: 14
     delayAfter: 1.5
   - localizedString:
+      m_Dirty: 1
+      m_UpdateTrigger: 0
+      <property>k__BackingField: 
       m_TableReference:
         m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 1
       m_TableEntryReference:
         m_KeyId: 3181821612032
         m_Key: 
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 2
       m_FallbackState: 0
       m_WaitForCompletion: 0
+      m_LocaleOverride: {fileID: 0}
+      m_CurrentTable:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 1
+      m_CurrentTableEntry:
+        m_KeyId: 3181821612032
+        m_Key: 
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 2
+      m_ActivatedCount: 0
       m_LocalVariables: []
+      m_CurrentStringChangedValue: 
+      m_WaitingForVariablesEndUpdate: 0
     charsPerSecond: 13
     delayAfter: 1.5
   - localizedString:
+      m_Dirty: 1
+      m_UpdateTrigger: 0
+      <property>k__BackingField: 
       m_TableReference:
         m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 1
       m_TableEntryReference:
         m_KeyId: 53297936912384
         m_Key: 
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 2
       m_FallbackState: 0
       m_WaitForCompletion: 0
+      m_LocaleOverride: {fileID: 0}
+      m_CurrentTable:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 1
+      m_CurrentTableEntry:
+        m_KeyId: 53297936912384
+        m_Key: 
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 2
+      m_ActivatedCount: 0
       m_LocalVariables: []
+      m_CurrentStringChangedValue: 
+      m_WaitingForVariablesEndUpdate: 0
     charsPerSecond: 13
     delayAfter: 1.5
   - localizedString:
+      m_Dirty: 1
+      m_UpdateTrigger: 0
+      <property>k__BackingField: 
       m_TableReference:
         m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 1
       m_TableEntryReference:
         m_KeyId: 53375074357248
         m_Key: 
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 2
       m_FallbackState: 0
       m_WaitForCompletion: 0
+      m_LocaleOverride: {fileID: 0}
+      m_CurrentTable:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 1
+      m_CurrentTableEntry:
+        m_KeyId: 53375074357248
+        m_Key: 
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 2
+      m_ActivatedCount: 0
       m_LocalVariables: []
+      m_CurrentStringChangedValue: 
+      m_WaitingForVariablesEndUpdate: 0
     charsPerSecond: 14
     delayAfter: 1.5
   - localizedString:
+      m_Dirty: 1
+      m_UpdateTrigger: 0
+      <property>k__BackingField: 
       m_TableReference:
         m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 1
       m_TableEntryReference:
         m_KeyId: 53431647129600
         m_Key: 
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 2
       m_FallbackState: 0
       m_WaitForCompletion: 0
+      m_LocaleOverride: {fileID: 0}
+      m_CurrentTable:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 1
+      m_CurrentTableEntry:
+        m_KeyId: 53431647129600
+        m_Key: 
+        m_Valid: 0
+        <ReferenceType>k__BackingField: 2
+      m_ActivatedCount: 0
       m_LocalVariables: []
+      m_CurrentStringChangedValue: 
+      m_WaitingForVariablesEndUpdate: 0
     charsPerSecond: 14
     delayAfter: 1.5
+  currentTypewriter: {fileID: 0}
   references:
     version: 2
     RefIds: []
@@ -9926,6 +9995,7 @@ MonoBehaviour:
       m_Code: pt
     audioClip: {fileID: 8300000, guid: 84640554b039c6b42b5a95fed0b67ae3, type: 3}
   narrationStartDelay: 1
+  audioSource: {fileID: 0}
 --- !u!1 &1310067895
 GameObject:
   m_ObjectHideFlags: 0
@@ -15660,7 +15730,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1227200689}
+    m_TransformParent: {fileID: 695081462}
     m_Modifications:
     - target: {fileID: 1368145334625401173, guid: ffa9674f6870c5c4ea8032df77cab716,
         type: 3}
@@ -15724,18 +15794,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6479899439600284611, guid: ffa9674f6870c5c4ea8032df77cab716,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 99.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6479899439600284611, guid: ffa9674f6870c5c4ea8032df77cab716,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6479899439600284611, guid: ffa9674f6870c5c4ea8032df77cab716,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 96.36694
+      objectReference: {fileID: 0}
+    - target: {fileID: 6479899439600284611, guid: ffa9674f6870c5c4ea8032df77cab716,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: -75.729225
+      value: -75.72925
       objectReference: {fileID: 0}
     - target: {fileID: 6479899439600284611, guid: ffa9674f6870c5c4ea8032df77cab716,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.757858
+      value: 11.457858
       objectReference: {fileID: 0}
     - target: {fileID: 6479899439600284611, guid: ffa9674f6870c5c4ea8032df77cab716,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -161.71541
+      value: -161.71545
       objectReference: {fileID: 0}
     - target: {fileID: 6479899439600284611, guid: ffa9674f6870c5c4ea8032df77cab716,
         type: 3}
@@ -15805,5 +15890,4 @@ SceneRoots:
   - {fileID: 897301837}
   - {fileID: 2660910698424164039}
   - {fileID: 1222018283}
-  - {fileID: 369755020}
   - {fileID: 1272585745}
