@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abdb081964517634683bb2259ed9b145, type: 3}
-  m_Name: NarrationData
+  m_Script: {fileID: 11500000, guid: b83b924d5f99e794fac506ae69f20335, type: 3}
+  m_Name: FallingObjects_Scene1_Segment
   m_EditorClassIdentifier: 
-  paragraphs: []
-  localizedNarrations: []
-  narrationStartDelay: 0.5
-  references:
-    version: 2
-    RefIds: []
+  dialogue: {fileID: 11400000, guid: 21b16d03b6adcee42922a1312cbc5720, type: 2}
+  uiLayout: {fileID: 11400000, guid: 4ca86500255a44e47acba05cf20fa154, type: 2}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51511dc8fcdff74489508693769b34e1, type: 3}
+  m_Name: DefaultUILayout
+  m_EditorClassIdentifier: 
+  textEntryPrefab: {fileID: 873241170473142135, guid: 2766915fedbc7a745b92c12d9fa407f1,
+    type: 3}
+  scrollViewPrefab: {fileID: 5783689558679645577, guid: 42066a041c2b7a74f9543dc3d5dd25de,
+    type: 3}
+  choiceButtonPrefab: {fileID: 0}
