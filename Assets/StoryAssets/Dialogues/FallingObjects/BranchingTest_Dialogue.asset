@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c15ddf3a18e786444a7abbfd6d8e9526, type: 3}
-  m_Name: FallingObjects_Objective
+  m_Name: BranchingTest_Dialogue
   m_EditorClassIdentifier: 
   lines:
   - characterPortrait: {fileID: 0}
     localizedText:
       m_TableReference:
-        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+        m_TableCollectionName: 
       m_TableEntryReference:
-        m_KeyId: 341667271462912
+        m_KeyId: 0
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     localizedAudio:
       m_TableReference:
-        m_TableCollectionName: GUID:44d820f2a64b0334b858f58d8e8956a0
+        m_TableCollectionName: 
       m_TableEntryReference:
-        m_KeyId: 1838766833303552
+        m_KeyId: 0
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
-    charsPerSecond: 40
+    charsPerSecond: 0
     postLineDelay: 0
     choices: []
   references:

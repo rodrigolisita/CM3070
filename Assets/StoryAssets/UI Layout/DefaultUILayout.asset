@@ -16,4 +16,5 @@ MonoBehaviour:
     type: 3}
   scrollViewPrefab: {fileID: 5783689558679645577, guid: 42066a041c2b7a74f9543dc3d5dd25de,
     type: 3}
-  choiceButtonPrefab: {fileID: 0}
+  choiceButtonPrefab: {fileID: 6855374614503916817, guid: 913242d49ace049499121d5d41978cb0,
+    type: 3}

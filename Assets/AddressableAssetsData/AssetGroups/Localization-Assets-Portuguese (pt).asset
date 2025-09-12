@@ -21,6 +21,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-pt
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 75cff333b7f338046b3e427968fe033d
+    m_Address: FallingObject_LearningObjectives_pt
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7e12b49d888f14c418b1194bfdf02be2
     m_Address: FOpt_Intro3
     m_ReadOnly: 1

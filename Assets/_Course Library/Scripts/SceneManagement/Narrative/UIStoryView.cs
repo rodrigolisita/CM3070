@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
+using System;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 using TMPro;
@@ -29,10 +31,11 @@ public class UIStoryView : MonoBehaviour
     private GameObject textPrefab;
     private RectTransform contentParent;
     private ScrollRect scrollRect;
-    private GameObject choiceButtonPrefab;
-    private Transform choiceContainer;
 
     private TypewriterTextAnim currentTypewriter;
+
+    private GameObject choiceButtonPrefab;
+    private Transform choiceContainer;
 
     /// <summary>
     /// Injects the necessary UI and prefab references from the GameManager.
@@ -49,11 +52,13 @@ public class UIStoryView : MonoBehaviour
 
         // Find or create a container for choice buttons
         // For simplicity, we can create it as a child of the scroll view
-        GameObject choiceContainerObj = new GameObject("ChoiceContainer");
-        choiceContainerObj.transform.SetParent(scrollViewInstance.transform, false);
-        this.choiceContainer = choiceContainerObj.transform;
+        //GameObject choiceContainerObj = new GameObject("ChoiceContainer");
+        //choiceContainerObj.transform.SetParent(scrollViewInstance.transform, false);
+        //this.choiceContainer = choiceContainerObj.transform;
         // Add a layout group to the container to organize buttons
-        choiceContainerObj.AddComponent<VerticalLayoutGroup>();
+        //choiceContainerObj.AddComponent<VerticalLayoutGroup>();
+
+        this.choiceContainer = scrollViewInstance.transform.Find("ChoiceContainer");
     }
 
     
@@ -254,5 +259,51 @@ public class UIStoryView : MonoBehaviour
                 portraitImage.enabled = false;
             }
         }
+    }
+
+    /// <summary>
+    /// Creates buttons for each choice and waits for a selection.
+    /// </summary>
+    public IEnumerator DisplayChoices(List<ChoiceData> choices, Action<int> onChoiceSelectedCallback)
+    {
+        // Clear old choices from container
+        foreach (Transform child in choiceContainer)
+        {
+            Destroy(child.gameObject);
+        }
+
+        bool choiceMade = false;
+        choiceContainer.gameObject.SetActive(true); // Make sure the container is visible
+
+        // Create a button for each choice
+        foreach (ChoiceData choice in choices)
+        {
+            GameObject buttonInstance = Instantiate(choiceButtonPrefab, choiceContainer);
+
+            // Set button text
+            TextMeshProUGUI buttonText = buttonInstance.GetComponentInChildren<TextMeshProUGUI>();
+            if (buttonText != null)
+            {
+                buttonText.text = choice.choiceText;
+            }
+
+            // Add listener to button click event
+            Button button = buttonInstance.GetComponent<Button>();
+            button.onClick.AddListener(() =>
+            {
+                choiceMade = true;
+                onChoiceSelectedCallback(choice.nextLineIndex);
+            });
+        }
+
+        // Wait here until a button click sets choiceMade to true
+        yield return new WaitUntil(() => choiceMade);
+        
+        // Clean up the buttons after a choice has been made
+        foreach (Transform child in choiceContainer)
+        {
+            Destroy(child.gameObject);
+        }
+        choiceContainer.gameObject.SetActive(false);
     }
 }

@@ -11,22 +11,6 @@ public class StoryPlayer : MonoBehaviour
 {
     public event Action OnSequenceFinished;
 
-    //[Header("Data Asset")]
-    //[Tooltip("The story sequence asset to play.")]
-    //[SerializeField] private StorySequenceAsset storyToPlay;
-
-    //[Header("System References")]
-    //[Tooltip("The component responsible for displaying text elements in the UI.")]
-    //[SerializeField] private UIStoryView uiView;
-    //[Tooltip("The component responsible for playing narration audio clips.")]
-    //[SerializeField] private NarrationPlayer narrationPlayer;
-
-    //private int currentLineIndex = 0;
-    //private bool isLinePlaying = false;
-
-    //private Coroutine storyCoroutine;
-    //private bool isStoryActive = false;
-
     // References will be injected by the GameManager
     private UIStoryView uiView;
     private NarrationPlayer narrationPlayer;
@@ -54,89 +38,68 @@ public class StoryPlayer : MonoBehaviour
         StartCoroutine(PlaySequence());
     }
 
-    //void Awake()
-    //{
-        // Auto-find components if they haven't been assigned in the inspector.
-        // This assumes UIStoryView is on the same GameObject as StoryPlayer.
-    //    if (uiView == null)
-    //    {
-    //        uiView = GetComponent<UIStoryView>();
-    //        if (uiView == null)
-    //        {
-    //            Debug.LogError("StoryPlayer needs a UIStoryView component on the same GameObject.", this);
-    //        }
-    //    }
-
-        // This assumes NarrationPlayer is on a child GameObject.
-    //    if (narrationPlayer == null)
-    //    {
-    //        narrationPlayer = GetComponentInChildren<NarrationPlayer>();
-    //        if (narrationPlayer == null)
-    //        {
-    //            Debug.LogError("StoryPlayer could not find a NarrationPlayer component in its children.", this);
-    //        }
-    //    }
-    //}    
-
-    //void Start()
-    //{
-    //    if (storyToPlay == null || uiView == null || narrationPlayer == null)
-    //    {
-    //        Debug.LogError("StoryPlayer references are incomplete. Please assign all fields.");
-    //        return;
-    //    }
-    //    isStoryActive = true; // Set flag to true when starting
-    //    StartCoroutine(PlaySequence());
-    //}
-
     //private IEnumerator PlaySequence()
     //{
-        // Iterate through every line in the story asset
     //    for (currentLineIndex = 0; currentLineIndex < storyToPlay.lines.Count; currentLineIndex++)
     //    {
-            // Safety check: If story was stopped while waiting for the previous line, exit now.
     //        if (!isStoryActive) yield break;
 
-    //        isLinePlaying = true;
     //        StoryLine currentLine = storyToPlay.lines[currentLineIndex];
-
-            // 1. Start both text display and audio playback simultaneously
+    
     //        Coroutine textCoroutine = StartCoroutine(uiView.DisplayTextLine(currentLine));
     //        Coroutine audioCoroutine = StartCoroutine(narrationPlayer.PlayNarration(currentLine.localizedAudio));
 
-            // 2. Wait for both text animation and audio clip to finish before proceeding
     //        yield return textCoroutine;
     //        yield return audioCoroutine;
 
-            // 3. Post-line delay
-    //        isLinePlaying = false;
     //        yield return new WaitForSeconds(currentLine.postLineDelay);
     //    }
-    //    Debug.Log("Story sequence finished.");
+
     //    isStoryActive = false;
-    //}
-
-        private IEnumerator PlaySequence()
+    //    Debug.Log("Story sequence finished.");
+    //    OnSequenceFinished?.Invoke(); // Invoke the event here
+    //}                
+    private IEnumerator PlaySequence()
     {
-        for (currentLineIndex = 0; currentLineIndex < storyToPlay.lines.Count; currentLineIndex++)
+        // Use a while loop to allow for non-linear jumps
+        while (isStoryActive && currentLineIndex < storyToPlay.lines.Count)
         {
-            if (!isStoryActive) yield break;
-
             StoryLine currentLine = storyToPlay.lines[currentLineIndex];
-    
+
+            // 1. Display the current dialogue line (text, audio, portrait)
             Coroutine textCoroutine = StartCoroutine(uiView.DisplayTextLine(currentLine));
             Coroutine audioCoroutine = StartCoroutine(narrationPlayer.PlayNarration(currentLine.localizedAudio));
-
             yield return textCoroutine;
             yield return audioCoroutine;
 
-            yield return new WaitForSeconds(currentLine.postLineDelay);
+            // 2. Check for branching choices
+            if (currentLine.choices != null && currentLine.choices.Count > 0)
+            {
+                // Show choices and wait for the user to make a selection.
+                // We pass the "OnChoiceSelected" function as a callback.
+                yield return StartCoroutine(uiView.DisplayChoices(currentLine.choices, OnChoiceSelected));
+                // The loop will now continue from the new index set by the callback.
+            }
+            else
+            {
+                // No choices, proceed linearly after the delay
+                yield return new WaitForSeconds(currentLine.postLineDelay);
+                currentLineIndex++;
+            }
         }
-
+        
         isStoryActive = false;
         Debug.Log("Story sequence finished.");
-        OnSequenceFinished?.Invoke(); // Invoke the event here
-    }                
+        OnSequenceFinished?.Invoke();
+    }
+
+    /// <summary>
+    /// This function is passed to the UI to be called when a choice button is clicked.
+    /// </summary>
+    private void OnChoiceSelected(int newIndex)
+    {
+        currentLineIndex = newIndex;
+    }
 
 
 

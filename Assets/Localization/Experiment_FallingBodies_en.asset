@@ -60,11 +60,24 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 341667271462912
-    m_Localized: 'Falling Bodies Laboratory
+    m_Localized: 'Learning Objectives
 
-      Explore the motion of objects
-      under gravity. Measure, analyze, and understand how acceleration affects falling
-      bodies.'
+      In this module, you will:
+
+      Investigate
+      how gravity affects falling objects of different masses.
+
+      Observe how
+      air resistance (drag) alters motion based on shape and speed.
+
+      Explore
+      buoyancy in fluid environments and its impact on descent.
+
+      Compare motion
+      across different conditions to understand the interplay of forces.
+
+      Apply
+      scientific reasoning to predict, test, and explain outcomes.'
     m_Metadata:
       m_Items: []
   - m_Id: 427017285193728

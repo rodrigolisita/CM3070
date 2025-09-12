@@ -61,9 +61,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 341667271462912
-    m_Localized: "Laborat\xF3rio de Queda Livre\nExplore o movimento dos objetos
-      sob a a\xE7\xE3o da gravidade. Me\xE7a, analise e compreenda como a acelera\xE7\xE3o
-      afeta os corpos em queda."
+    m_Localized: "Objetivos de Aprendizagem\nNeste m\xF3dulo, voc\xEA ir\xE1:\nInvestigar
+      como a gravidade afeta objetos de diferentes massas.\nObservar como a resist\xEAncia
+      do ar (arrasto) altera o movimento conforme forma e velocidade.\nExplorar o
+      empuxo em ambientes fluidos e seu impacto na queda.\nComparar movimentos em
+      diferentes condi\xE7\xF5es para entender a intera\xE7\xE3o das for\xE7as.\nAplicar
+      racioc\xEDnio cient\xEDfico para prever, testar e explicar os resultados."
     m_Metadata:
       m_Items: []
   - m_Id: 427017285193728

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Localization;
+using System.Collections.Generic;
 
 /// <summary>
 /// Holds all data for a single line of dialogue in a story sequence.
@@ -18,8 +19,12 @@ public class StoryLine
     public LocalizedAsset<AudioClip> localizedAudio;
 
     [Tooltip("How fast the text appears, in characters per second.")]
-    public float charsPerSecond = 25f; // <<< ADD THIS LINE
+    public float charsPerSecond = 25f; 
 
     [Tooltip("The pause in seconds after this line has finished displaying and narrating.")]
     public float postLineDelay = 1.0f;
+
+    [Header("Branching Options")]
+    [Tooltip("Add choices here to create a branch. If this list is empty, the story continues to the next line automatically.")]
+    public List<ChoiceData> choices;
 }

@@ -39,6 +39,10 @@ MonoBehaviour:
     m_Key: FO_Intro6
     m_Metadata:
       m_Items: []
+  - m_Id: 1838766833303552
+    m_Key: FO_LearningObjectives
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 876655086001455215
@@ -77,6 +81,10 @@ MonoBehaviour:
           - en
           - pt
         - m_KeyId: 9904141684736
+          m_TableCodes:
+          - en
+          - pt
+        - m_KeyId: 1838766833303552
           m_TableCodes:
           - en
           - pt
