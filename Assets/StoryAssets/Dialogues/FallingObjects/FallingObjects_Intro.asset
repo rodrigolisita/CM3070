@@ -34,11 +34,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
     charsPerSecond: 14
     postLineDelay: 1.5
-    choices:
-    - choiceText: A
-      nextLineIndex: 2
-    - choiceText: B
-      nextLineIndex: 3
+    choices: []
   - characterPortrait: {fileID: 21300000, guid: 19e8021eb59716e4d9a2789063f7aa66,
       type: 3}
     localizedText:

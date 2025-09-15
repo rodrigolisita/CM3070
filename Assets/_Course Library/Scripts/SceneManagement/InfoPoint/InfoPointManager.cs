@@ -41,8 +41,23 @@ public class InfoPointManager : MonoBehaviour
             List<NarrativeSegment> segmentsForThisButton = link.segmentsToPlay;
             bool canBeClosedForThisButton = link.allowToClose;
 
-            GameObject triggerButtonGO = GameObject.Find(link.triggerButtonName);
-            Button triggerButton = triggerButtonGO.GetComponent<Button>();
+            //GameObject triggerButtonGO = GameObject.Find(link.triggerButtonName);
+            //Button triggerButton = triggerButtonGO.GetComponent<Button>();
+            // Find the button component within the specified infoPointScreen's children
+            Button triggerButton = null;
+            if (screenToActivate != null)
+            {
+                // We use GetComponentInChildren<Button>(true) which can find components on inactive objects
+                Button[] allButtons = screenToActivate.GetComponentsInChildren<Button>(true);
+                foreach (Button btn in allButtons)
+                {
+                    if (btn.name == link.triggerButtonName)
+                    {
+                        triggerButton = btn;
+                        break;
+                    }
+                }
+            }
 
             // Add a listener to the button's click event
             if (triggerButton != null)
