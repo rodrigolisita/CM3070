@@ -39,6 +39,14 @@ MonoBehaviour:
     m_Key: button_GoToExperiment
     m_Metadata:
       m_Items: []
+  - m_Id: 3223340196855808
+    m_Key: button_skip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3223408006168576
+    m_Key: button_PlayAgain
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

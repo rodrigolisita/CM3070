@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
@@ -6,47 +7,66 @@ using System.Collections;
 /// The main controller in the scene. It loads a NarrativeSegment,
 /// builds the required UI from a layout blueprint, and starts the story.
 /// </summary>
-public class GameManager : MonoBehaviour
+public class SceneStoryController : MonoBehaviour
 {
+    [Header("Content")]
     [Tooltip("The Narrative Segment to load and play when the scene starts.")]
     public NarrativeSegment segmentToStart;
 
+    //[Header("Settings")]
+    //[Tooltip("If checked, this info point will start its narrative as soon as the scene loads.")]
+    //public bool startAutomatically = false;
+
+      [Header("UI References")]
     //[Tooltip("The main world-space canvas to instantiate the story UI onto.")]
     //public Canvas mainCanvas;
     [Tooltip("The parent object to instantiate the story UI into.")]
-    public Transform storyUiParent; // Formerly mainCanvas
+    public Transform storyUiParent;
 
-    [Header("Transitions")]
-    [Tooltip("The Renderer for the VR fade screen quad/sphere.")]
-    public Renderer fadeScreenRenderer;
+    //[Header("Transitions")]
+    //[Tooltip("The Renderer for the VR fade screen quad/sphere.")]
+    //public Renderer fadeScreenRenderer;
 
     [Header("UI Elements")]
     public GameObject playAgainButton;    
+    [Tooltip("The 'Continue' button to go to the next segment.")]
+    public GameObject continueButton;
+    [Tooltip("The 'Back' button to go to the previous segment.")]
+    public GameObject backButton;    
+    [Tooltip("The 'Close' button to close the canvas.")]
+    public GameObject closeButton;    
 
     // Internal reference to the currently active story system
     private NarrativeSegment currentSegment;
     private StoryPlayer currentStoryPlayerInstance;
     private GameObject currentScrollViewInstance;
+    private int currentSegmentIndex;
+    private bool hasNextSegment;
+    private bool hasPreviousSegment;
 
-    void Start()
-    {
-        if (segmentToStart != null)
-        {
-            StartNarrativeSegment(segmentToStart);
-        }
-        
-        
-        
-        
-        
-    }
+//    void Start()
+//    {
+//        if (segmentToStart != null && startAutomatically)
+//        {
+//            StartNarrativeSegment(segmentToStart);
+//        }
+//    }
 
-    public void StartNarrativeSegment(NarrativeSegment segment)
+//    public void StartNarrativeSegment(NarrativeSegment segment, int segmentIndex)
+    public void StartNarrativeSegment(NarrativeSegment segment, bool hasNext, bool hasPrevious)
     {
         // Hide the button at the start of a new segment
         if (playAgainButton != null)
         {
             playAgainButton.SetActive(false);
+        }
+        if (continueButton != null)
+        {
+            continueButton.SetActive(hasNext);
+        }
+        if (backButton != null)
+        {
+            backButton.SetActive(hasPrevious);
         }
 
         // 1. Clean up any story that is currently running.
@@ -59,12 +79,17 @@ public class GameManager : MonoBehaviour
         }
 
         currentSegment = segment; // Store the current segment
+        hasNextSegment = hasNext;
+        hasPreviousSegment = hasPrevious;
 
         // 2. Get the UI blueprint from the segment
         StoryUILayout layout = segment.uiLayout;
 
         // 3. Build the UI: Instantiate the ScrollView from the blueprint
         currentScrollViewInstance = Instantiate(layout.scrollViewPrefab, storyUiParent);
+
+        // 3.5. Ensure the newly created UI is active before we use it.
+        currentScrollViewInstance.SetActive(true);
 
         // 4. Reset the ScrollView's transform to fill the canvas
         RectTransform scrollRectTransform = currentScrollViewInstance.GetComponent<RectTransform>();
@@ -117,6 +142,10 @@ public class GameManager : MonoBehaviour
         {
             playAgainButton.SetActive(true);
         }
+        //if (continueButton != null)
+        //{
+        //    continueButton.SetActive(true);
+        //}
 
         // Start a new coroutine to handle the post-segment action with a delay
         StartCoroutine(ExecutePostSegmentAction());
@@ -141,7 +170,7 @@ public class GameManager : MonoBehaviour
                 if (!string.IsNullOrEmpty(currentSegment.sceneToLoad))
                 {
                     // Start the fade out
-                    yield return StartCoroutine(FadeOut(fadeDuration));
+    //                yield return StartCoroutine(FadeOut(fadeDuration));
                     SceneManager.LoadScene(currentSegment.sceneToLoad);
                 }
                 break;
@@ -155,27 +184,27 @@ public class GameManager : MonoBehaviour
     }
     
   
-    private IEnumerator FadeOut(float duration)
-    {
+//    private IEnumerator FadeOut(float duration)
+//    {
         // Get the material instance
-        Material material = fadeScreenRenderer.material;
+//        Material material = fadeScreenRenderer.material;
         
         // Make sure it's visible before we start
-        fadeScreenRenderer.enabled = true;
-        SetAlpha(material, 0f);
+//        fadeScreenRenderer.enabled = true;
+//        SetAlpha(material, 0f);
 
-        float elapsedTime = 0f;
-        while (elapsedTime < duration)
-        {
-            elapsedTime += Time.deltaTime;
-            float newAlpha = Mathf.Lerp(0f, 1f, elapsedTime / duration);
-            SetAlpha(material, newAlpha);
-            yield return null;
-        }
+//        float elapsedTime = 0f;
+//        while (elapsedTime < duration)
+//        {
+//            elapsedTime += Time.deltaTime;
+//            float newAlpha = Mathf.Lerp(0f, 1f, elapsedTime / duration);
+//            SetAlpha(material, newAlpha);
+//            yield return null;
+//        }
 
         // Ensure it's fully black
-        SetAlpha(material, 1f);
-    }
+//        SetAlpha(material, 1f);
+//    }
 
     private void SetAlpha(Material mat, float alpha)
     {
@@ -212,7 +241,7 @@ public class GameManager : MonoBehaviour
         if (currentSegment != null)
         {
             // Simply call the main function again with the same segment data
-            StartNarrativeSegment(currentSegment);
+            StartNarrativeSegment(currentSegment,hasNextSegment,hasPreviousSegment);
         }
     }
 
@@ -224,6 +253,15 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    
+    /// <summary>
+    /// Sets the visibility of the Close button. Called by the InfoPointManager.
+    /// </summary>
+    public void SetAllowClose(bool isAllowed)
+    {
+        if (closeButton != null)
+        {
+            closeButton.SetActive(isAllowed);
+        }
+    }
     
 }

@@ -19,6 +19,13 @@ public class StoryPlayer : MonoBehaviour
     private bool isStoryActive = false;
     private int currentLineIndex = 0;
 
+    void Awake()
+    {
+        // Find the components within the same prefab
+        uiView = GetComponentInChildren<UIStoryView>(true);
+        narrationPlayer = GetComponentInChildren<NarrationPlayer>(true);
+    }
+
     /// <summary>
     /// Injects the necessary component references from the GameManager.
     /// </summary>

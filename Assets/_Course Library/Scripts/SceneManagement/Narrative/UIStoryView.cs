@@ -28,14 +28,42 @@ public class UIStoryView : MonoBehaviour
     //private TypewriterTextAnim currentTypewriter;
     
     // These will now be set by the GameManager via InjectReferences
-    private GameObject textPrefab;
-    private RectTransform contentParent;
-    private ScrollRect scrollRect;
+//    private GameObject textPrefab;
+//    private RectTransform contentParent;
+//    private ScrollRect scrollRect;
+
+//    private TypewriterTextAnim currentTypewriter;
+
+//    private GameObject choiceButtonPrefab;
+//    private Transform choiceContainer;
+
+[Header("Internal UI References")]
+    [SerializeField] private ScrollRect scrollRect;
+    [SerializeField] private RectTransform contentParent;
+    [SerializeField] private Transform choiceContainer;
+
+    [Header("External Prefabs")]
+    [SerializeField] private GameObject textPrefab;
+    [SerializeField] private GameObject choiceButtonPrefab;
 
     private TypewriterTextAnim currentTypewriter;
 
-    private GameObject choiceButtonPrefab;
-    private Transform choiceContainer;
+    void Awake()
+    {
+        // Find the components within the same prefab
+        scrollRect = GetComponentInChildren<ScrollRect>(true);
+        if (scrollRect != null)
+        {
+            contentParent = scrollRect.content;
+        }
+
+        // Find the choice container by its name
+        Transform choiceContainerTransform = transform.parent.Find("ChoiceContainer");
+        if (choiceContainerTransform != null)
+        {
+            choiceContainer = choiceContainerTransform;
+        }
+    }
 
     /// <summary>
     /// Injects the necessary UI and prefab references from the GameManager.
