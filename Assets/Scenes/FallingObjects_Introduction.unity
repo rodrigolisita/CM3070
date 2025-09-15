@@ -2008,7 +2008,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: b80e14af901843c48b5eb850f551f288, type: 2}
     - {fileID: 11400000, guid: 218a29b1a21e8aa4cb79f4ded6ea9daf, type: 2}
     startAutomatically: 1
-    allowToClose: 0
+    allowToClose: 1
 --- !u!4 &306484033
 Transform:
   m_ObjectHideFlags: 0
@@ -4296,11 +4296,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 493784764355868733, guid: 1b2b66b444a0dfe4e9da8f53cd3aa432,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3261767225006833540, guid: 1b2b66b444a0dfe4e9da8f53cd3aa432,
         type: 3}
       propertyPath: m_Camera
@@ -4365,11 +4360,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InfoPointScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059549709856498793, guid: 1b2b66b444a0dfe4e9da8f53cd3aa432,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
