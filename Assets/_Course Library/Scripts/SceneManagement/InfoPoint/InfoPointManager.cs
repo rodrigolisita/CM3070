@@ -34,6 +34,21 @@ public class InfoPointManager : MonoBehaviour
 
     void Start()
     {
+        // First, deactivate all linked screens to ensure a clean start
+        foreach (var link in infoPoints)
+        {
+            if (link.infoPointScreen == null) continue;
+
+            // Find the child object named "-- INTERFACE --"
+            Transform interfaceTransform = link.infoPointScreen.transform.Find("-- INTERFACE --");
+
+            if (interfaceTransform != null)
+            {
+                GameObject interfaceObject = interfaceTransform.gameObject;
+                interfaceObject.SetActive(false); // Deactivate it at the start
+            }
+        }
+
         // Loop through each link you created in the Inspector
         foreach (var link in infoPoints)
         {
