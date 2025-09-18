@@ -15,6 +15,18 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Portuguese (pt)
   m_GUID: 13a19f4a43852cf439b24d348d977f5c
   m_SerializeEntries:
+  - m_GUID: 23e9ebe9b5a5cb841830962099361ee2
+    m_Address: Experiment_CFD_pt
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bcfd72b53df55d94c91a428224b25aff
+    m_Address: FluidNames_pt
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c78def5e955907d489aa831247d7cd1b
     m_Address: UI_Text_pt
     m_ReadOnly: 1

@@ -50,6 +50,88 @@ MonoBehaviour:
     m_Localized: Play Again
     m_Metadata:
       m_Items: []
+  - m_Id: 4260736640253952
+    m_Localized: Change Mass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4261151062654976
+    m_Localized: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4627345561124864
+    m_Localized: Gravity Force
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4627449068158976
+    m_Localized: Buyoancy Force
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4627521507983360
+    m_Localized: Drag Force
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4632581814124544
+    m_Localized: Terminal Velocity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4742088099659776
+    m_Localized: Diameter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4742165065138176
+    m_Localized: Mass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4746912543309824
+    m_Localized: Go to Next experiment?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4747031481188352
+    m_Localized: 'Previous
+
+      Laboratory'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4747121713250304
+    m_Localized: Current Experiment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4747250256084992
+    m_Localized: Cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4747287707025408
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5001921965096960
+    m_Localized: Back to Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5043151159721984
+    m_Localized: Increase Mass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5043221682749440
+    m_Localized: Decrease Mass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5046200817188864
+    m_Localized: Size
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5056896686653440
+    m_Localized: Scale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5057100454330368
+    m_Localized: Vector
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5057158172147712
+    m_Localized: Countor
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -35,7 +35,7 @@ MonoBehaviour:
     charsPerSecond: 14
     postLineDelay: 1.5
     choices: []
-  - characterPortrait: {fileID: 21300000, guid: 19e8021eb59716e4d9a2789063f7aa66,
+  - characterPortrait: {fileID: 21300000, guid: 6408e395ab62a204aadcf373a2c9cef6,
       type: 3}
     localizedText:
       m_TableReference:
@@ -57,8 +57,7 @@ MonoBehaviour:
     charsPerSecond: 14
     postLineDelay: 1.5
     choices: []
-  - characterPortrait: {fileID: 21300000, guid: 359420ff629a8c04f86d33e8035dfee0,
-      type: 3}
+  - characterPortrait: {fileID: 0}
     localizedText:
       m_TableReference:
         m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe

@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15ddf3a18e786444a7abbfd6d8e9526, type: 3}
+  m_Name: FallingObjects_Gravity
+  m_EditorClassIdentifier: 
+  lines:
+  - characterPortrait: {fileID: 0}
+    localizedText:
+      m_TableReference:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+      m_TableEntryReference:
+        m_KeyId: 4673666024243200
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    localizedAudio:
+      m_TableReference:
+        m_TableCollectionName: GUID:44d820f2a64b0334b858f58d8e8956a0
+      m_TableEntryReference:
+        m_KeyId: 3893212752936960
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    charsPerSecond: 14
+    postLineDelay: 1.5
+    choices: []
+  - characterPortrait: {fileID: 0}
+    localizedText:
+      m_TableReference:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+      m_TableEntryReference:
+        m_KeyId: 4673670436651008
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    localizedAudio:
+      m_TableReference:
+        m_TableCollectionName: GUID:44d820f2a64b0334b858f58d8e8956a0
+      m_TableEntryReference:
+        m_KeyId: 3893530983170048
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    charsPerSecond: 14
+    postLineDelay: 1.5
+    choices: []
+  - characterPortrait: {fileID: 0}
+    localizedText:
+      m_TableReference:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+      m_TableEntryReference:
+        m_KeyId: 4673672852570112
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    localizedAudio:
+      m_TableReference:
+        m_TableCollectionName: GUID:44d820f2a64b0334b858f58d8e8956a0
+      m_TableEntryReference:
+        m_KeyId: 3893551287795712
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    charsPerSecond: 14
+    postLineDelay: 0
+    choices: []
+  - characterPortrait: {fileID: 0}
+    localizedText:
+      m_TableReference:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+      m_TableEntryReference:
+        m_KeyId: 4701686445408256
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    localizedAudio:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    charsPerSecond: 14
+    postLineDelay: 1.5
+    choices:
+    - choiceText: A
+      nextLineIndex: 4
+    - choiceText: B
+      nextLineIndex: 5
+  - characterPortrait: {fileID: 0}
+    localizedText:
+      m_TableReference:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+      m_TableEntryReference:
+        m_KeyId: 4701191190380544
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    localizedAudio:
+      m_TableReference:
+        m_TableCollectionName: GUID:44d820f2a64b0334b858f58d8e8956a0
+      m_TableEntryReference:
+        m_KeyId: 3923169856225280
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    charsPerSecond: 14
+    postLineDelay: 1.5
+    choices:
+    - choiceText: A
+      nextLineIndex: 4
+    - choiceText: B
+      nextLineIndex: 5
+  - characterPortrait: {fileID: 0}
+    localizedText:
+      m_TableReference:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+      m_TableEntryReference:
+        m_KeyId: 4701151369658368
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    localizedAudio:
+      m_TableReference:
+        m_TableCollectionName: GUID:44d820f2a64b0334b858f58d8e8956a0
+      m_TableEntryReference:
+        m_KeyId: 3923237564874752
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    charsPerSecond: 14
+    postLineDelay: 1.5
+    choices:
+    - choiceText: A
+      nextLineIndex: 4
+    - choiceText: B
+      nextLineIndex: 5
+  references:
+    version: 2
+    RefIds: []

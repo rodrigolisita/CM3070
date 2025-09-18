@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Experiment_CFD_pt
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt
+  m_SharedData: {fileID: 11400000, guid: 8b522e2a460a2ae43bf9dc8dfce49640, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 79820521472
+    m_Localized: "Simula\xE7\xE3o de Viscos\xEDmetro de Esfera"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1972789608448
+    m_Localized: "Analisaremos a for\xE7a de arrasto a partir de uma simula\xE7\xE3o
+      de fluxo laminar sobre uma esfera. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1987574530048
+    m_Localized: "A configura\xE7\xE3o: uma esfera s\xF3lida, fixa no espa\xE7o,
+      e o fluido escoando sobre a esfera. O fluido em movimento exerce uma for\xE7a
+      de press\xE3o e uma for\xE7a viscosa na superf\xEDcie da esfera."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2168772657152
+    m_Localized: "A for\xE7a de press\xE3o atua em uma dire\xE7\xE3o normal \xE0
+      superf\xEDcie da esfera, enquanto a for\xE7a viscosa atua tangencialmente \xE0
+      superf\xEDcie da esfera. A soma das for\xE7as de press\xE3o e viscosa \xE9
+      a for\xE7a de arrasto resultante atuando na superf\xEDcie da esfera."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19573804662784
+    m_Localized: "Posi\xE7\xE3o do Plano"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19646542282752
+    m_Localized: Espessura do Plano
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -21,6 +21,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6799f70d98cc3174c9f8b8199171ae7a
+    m_Address: Experiment_CFD_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6848cc1afb50dca40a4f7f2b9d38518a
     m_Address: Experiment_FallingBodies_en
     m_ReadOnly: 1
@@ -29,6 +35,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8e4977945b1be1846b89c85b38d72a80
     m_Address: UI_Text_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec477725a333c2d40b00f8054abbbdd4
+    m_Address: FluidNames_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

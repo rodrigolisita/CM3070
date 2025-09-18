@@ -98,9 +98,18 @@ public class InfoPointManager : MonoBehaviour
         currentSegmentIndex = 0;
 
         // If a different story screen is already open, close it first
-        if (currentScreenInstance != null && currentScreenInstance != screenInstance)
+        foreach (var link in infoPoints)
         {
-            currentScreenInstance.SetActive(false);
+            // If this is a different InfoPoint from the one we want to activate...
+            if (link.infoPointScreen != screenInstance)
+            {
+                // ...find its interface child and deactivate it.
+                Transform interfaceTransform = link.infoPointScreen.transform.Find("-- INTERFACE --");
+                if (interfaceTransform != null)
+                {
+                    interfaceTransform.gameObject.SetActive(false);
+                }
+            }
         }
 
         // Activate the new screen

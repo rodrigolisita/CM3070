@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15ddf3a18e786444a7abbfd6d8e9526, type: 3}
+  m_Name: FallingObjects_ForcesIntro
+  m_EditorClassIdentifier: 
+  lines:
+  - characterPortrait: {fileID: 21300000, guid: b37e8d8d766845c47b9e707e4794b621,
+      type: 3}
+    localizedText:
+      m_TableReference:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+      m_TableEntryReference:
+        m_KeyId: 4433446393643008
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    localizedAudio:
+      m_TableReference:
+        m_TableCollectionName: GUID:44d820f2a64b0334b858f58d8e8956a0
+      m_TableEntryReference:
+        m_KeyId: 3658229933178880
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    charsPerSecond: 14
+    postLineDelay: 1.5
+    choices: []
+  - characterPortrait: {fileID: 0}
+    localizedText:
+      m_TableReference:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+      m_TableEntryReference:
+        m_KeyId: 4433566245879808
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    localizedAudio:
+      m_TableReference:
+        m_TableCollectionName: GUID:44d820f2a64b0334b858f58d8e8956a0
+      m_TableEntryReference:
+        m_KeyId: 3658306462449664
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    charsPerSecond: 14
+    postLineDelay: 1.5
+    choices: []
+  - characterPortrait: {fileID: 0}
+    localizedText:
+      m_TableReference:
+        m_TableCollectionName: GUID:b2fbec87f4cc3174885dd11ddd4f68fe
+      m_TableEntryReference:
+        m_KeyId: 4433593190088704
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    localizedAudio:
+      m_TableReference:
+        m_TableCollectionName: GUID:44d820f2a64b0334b858f58d8e8956a0
+      m_TableEntryReference:
+        m_KeyId: 3658326523805696
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    charsPerSecond: 14
+    postLineDelay: 1.5
+    choices: []
+  references:
+    version: 2
+    RefIds: []

@@ -108,6 +108,137 @@ MonoBehaviour:
     m_Localized: Esferas em diferentes fluidos
     m_Metadata:
       m_Items: []
+  - m_Id: 3976176190914560
+    m_Localized: "Di\xE2metro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4339200642809856
+    m_Localized: 'Resultado: Caindo'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4339321732366336
+    m_Localized: 'Resultado: Subindo'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4339433560899584
+    m_Localized: 'Resultado: Empuxo neutro'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4433446393643008
+    m_Localized: "Voc\xEA j\xE1 se perguntou por que um navio de a\xE7o flutua, mas
+      uma pequena pedra afunda? Tudo se resume a um equil\xEDbrio de for\xE7as, e
+      neste laborat\xF3rio, voc\xEA poder\xE1 ver essas for\xE7as em a\xE7\xE3o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4433566245879808
+    m_Localized: "N\xF3s vamos focar em tr\xEAs protagonistas: a Gravidade, a for\xE7a
+      constante que puxa para baixo; o Empuxo, a for\xE7a que empurra para cima a
+      partir do fluido; e o Arrasto, a for\xE7a que se op\xF5e ao movimento."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4433593190088704
+    m_Localized: "Use os controles para ajustar as propriedades do objeto e o fluido
+      ao redor. Seu objetivo \xE9 descobrir a rela\xE7\xE3o entre esses par\xE2metros
+      e as for\xE7as que eles geram."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673666024243200
+    m_Localized: "Vamos analisar a Gravidade. Esta \xE9 a for\xE7a fundamental que
+      atrai dois objetos com massa um em dire\xE7\xE3o ao outro. Neste laborat\xF3rio,
+      \xE9 a imensa gravidade do planeta que puxa a esfera constantemente para baixo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673670436651008
+    m_Localized: "A intensidade dessa for\xE7a gravitacional \xE9 diretamente proporcional
+      \xE0 massa do objeto. Ao usar o controle para adicionar mais massa, voc\xEA
+      ver\xE1 a for\xE7a da gravidade aumentar. Mais massa equivale a uma for\xE7a
+      maior."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673672852570112
+    m_Localized: "Agora, uma pergunta para voc\xEA explorar: se voc\xEA aumentar
+      o tamanho da esfera, mas mantiver a massa exatamente a mesma, a for\xE7a da
+      gravidade que atua sobre ela muda? Use os controles para descobrir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673675172020224
+    m_Localized: "Agora, o Empuxo. Esta \xE9 a for\xE7a vertical para cima que um
+      fluido exerce sobre qualquer objeto imerso nele. \xC9 a for\xE7a que se op\xF5e
+      \xE0 gravidade e \xE9 a raz\xE3o pela qual as coisas flutuam."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673677046874112
+    m_Localized: "A intensidade da for\xE7a de empuxo \xE9 determinada por dois fatores:
+      o volume do objeto submerso e a densidade do fluido ao redor. Um objeto maior
+      desloca mais fluido, criando um empuxo maior."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673678993031168
+    m_Localized: "Aqui est\xE1 o seu pr\xF3ximo desafio: voc\xEA consegue fazer a
+      esfera flutuar? Tente encontrar uma combina\xE7\xE3o de tamanho, massa e fluido
+      que fa\xE7a a for\xE7a de empuxo ser maior que a for\xE7a da gravidade."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673683694845952
+    m_Localized: "Vamos analisar o Arrasto. Esta \xE9 uma for\xE7a de atrito que
+      atua sobre qualquer objeto que se move atrav\xE9s de um fluido. Crucialmente,
+      ela sempre atua na dire\xE7\xE3o oposta ao movimento do objeto, trabalhando
+      para desaceler\xE1-lo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673685196406784
+    m_Localized: "O Arrasto \xE9 complexo e depende de v\xE1rios fatores. Ele aumenta
+      com a densidade do fluido, a \xE1rea de se\xE7\xE3o transversal do objeto e,
+      mais importante, com o quadrado da velocidade do objeto. Um objeto mais r\xE1pido
+      sofre um arrasto dramaticamente maior."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673687046094848
+    m_Localized: "\xC0 medida que um objeto cai e acelera, sua for\xE7a de arrasto
+      cresce at\xE9 equilibrar perfeitamente a for\xE7a resultante da gravidade e
+      do empuxo. Neste ponto, o objeto para de acelerar e atinge uma velocidade constante
+      chamada 'Velocidade Terminal'. Voc\xEA consegue encontrar as condi\xE7\xF5es
+      que criam a maior velocidade terminal poss\xEDvel?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4701191190380544
+    m_Localized: "Exatamente! A for\xE7a da gravidade depende apenas da massa de
+      um objeto e da atra\xE7\xE3o gravitacional do planeta. Como a massa n\xE3o
+      mudou, a for\xE7a da gravidade continua a mesma, n\xE3o importa o qu\xE3o grande
+      ou pequena a esfera se torne."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4701151369658368
+    m_Localized: "N\xE3o exatamente, mas essa \xE9 uma confus\xE3o comum. Embora
+      o tamanho e o volume da esfera tenham mudado, sua massa permaneceu a mesma.
+      A for\xE7a da gravidade \xE9 determinada pela massa de um objeto, n\xE3o pelo
+      seu tamanho. Note no mostrador que o valor da gravidade n\xE3o mudou quando
+      voc\xEA ajustou o di\xE2metro."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4701686445408256
+    m_Localized: "A: N\xE3o.\nB: Sim."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4744112228827136
+    m_Localized: "Sobre esse Experimento : \n** Esferas em queda com a mesma massa!
+      **\n* **Experimente com diferentes massas**\n* Observe como a massa afeta as
+      esferas na queda livre."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4751858441420800
+    m_Localized: "Agora, vamos soltar cubos !!\nVoc\xEA consegue prever como a massa
+      ir\xE1 afetar seu movimento?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4754066222383104
+    m_Localized: "Agora n\xF3s iremos nos aprofundar no mundo da din\xE2mica dos
+      fluidos.\n\nSe prepare para observar a fascinante rela\xE7\xE3o entre viscosidade
+      e gravidade!\n\nSolte as esferas, todas com o mesmo di\xE2metro.\nCada esfera
+      est\xE1 em um fluido diferente.\nObserve como diferentes viscosidades afetam
+      a queda das esferas."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

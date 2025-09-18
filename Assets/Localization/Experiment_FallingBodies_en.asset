@@ -117,6 +117,147 @@ MonoBehaviour:
     m_Localized: Spheres in different fluids
     m_Metadata:
       m_Items: []
+  - m_Id: 3976176190914560
+    m_Localized: Diameter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4339200642809856
+    m_Localized: 'Result: Sinking'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4339321732366336
+    m_Localized: 'Result: Floating'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4339433560899584
+    m_Localized: 'Result: Neutral Buoyancy'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4433446393643008
+    m_Localized: Ever wonder why a steel ship floats, but a small pebble sinks? It
+      all comes down to a balance of forces, and in this lab, you'll get to see those
+      forces in action.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4433566245879808
+    m_Localized: 'We''ll focus on three main players: Gravity, the constant downward
+      pull; Buoyancy, the upward push from the fluid; and Drag, the force that fights
+      against motion.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4433593190088704
+    m_Localized: Use the controls to adjust the object's properties and the surrounding
+      fluid. Your goal is to discover the relationship between these parameters and
+      the forces they generate.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673666024243200
+    m_Localized: Let's look at Gravity. This is the fundamental force that pulls
+      any two objects with mass toward each other. In this lab, it's the planet's
+      immense gravity that constantly pulls the sphere downwards.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673670436651008
+    m_Localized: The strength of this gravitational pull is directly proportional
+      to the object's mass. As you use the slider to add more mass, you'll see the
+      force of gravity increase. More mass equals a stronger pull.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673672852570112
+    m_Localized: 'Now, here''s a question to explore: if you make the sphere larger
+      but keep its mass exactly the same, does the force of gravity acting on it
+      change? Use the controls to find out.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673675172020224
+    m_Localized: Now for Buoyancy. This is the upward force that a fluid exerts on
+      any object immersed in it. It's the force that opposes gravity and is the reason
+      why things float.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673677046874112
+    m_Localized: 'The strength of this buoyant force is determined by two things:
+      the volume of the object submerged, and the density of the surrounding fluid.
+      A larger object displaces more fluid, creating a stronger upward push.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673678993031168
+    m_Localized: 'Here is your next challenge: can you make the sphere float? Try
+      to find a combination of size, mass, and fluid that makes the buoyant force
+      greater than the force of gravity.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673683694845952
+    m_Localized: Finally, let's look at Drag. This is a frictional force that acts
+      on any object moving through a fluid. Crucially, it always acts in the opposite
+      direction of the object's motion, working to slow it down.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673685196406784
+    m_Localized: Drag is complex and depends on several factors. It increases with
+      the fluid's density, the object's cross-sectional area, and most importantly,
+      with the square of the object's velocity. A faster object experiences dramatically
+      more drag.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4673687046094848
+    m_Localized: As an object falls and speeds up, its drag force grows until it
+      perfectly balances the net force of gravity and buoyancy. At this point, the
+      object stops accelerating and reaches a constant speed called 'Terminal Velocity'.
+      Can you find the conditions that create the highest possible terminal velocity?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4701151369658368
+    m_Localized: Not quite, but that's a common misconception. While the sphere's
+      size and volume changed, its mass stayed the same. The force of gravity is
+      determined by an object's mass, not its size. Notice on the display that the
+      gravity value didn't change when you adjusted the diameter.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4701191190380544
+    m_Localized: That's exactly right! The force of gravity depends only on an object's
+      mass and the gravitational pull of the planet. Since the mass didn't change,
+      the force of gravity remains the same, no matter how large or small the sphere
+      gets.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4701686445408256
+    m_Localized: 'A: No.
+
+      B: Yes.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4744112228827136
+    m_Localized: "About this experiment: \n** Falling spheres with the same mass!
+      **\n* **Experiment with different mass values**\n* Observe how mass affects
+      the objects' behavior as they fall."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4751858441420800
+    m_Localized: 'This time, we''re dropping cubes !!
+
+      Can you predict how
+      mass will affect their descent and interactions?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4754066222383104
+    m_Localized: 'Now, we''re diving deeper into the world of fluid dynamics.
+
+
+      Prepare
+      to witness the fascinating interplay of viscosity and gravity!
+
+
+      Get
+      ready to release a set of spheres with the same diameters.
+
+      Each sphere
+      will encounter a different fluid environment.
+
+      Observe how varying viscosities
+      affect their descent.'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
