@@ -32,13 +32,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8400833352788691079}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9999762, z: -0, w: -0.0069038}
-  m_LocalPosition: {x: -0.24974807, y: 0.5170287, z: 0.06599999}
-  m_LocalScale: {x: 4.7993636, y: 1.1311147, z: 1.0001509}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.238, y: 0.5170287, z: 0.31}
+  m_LocalScale: {x: 4.7562733, y: 1.1311147, z: 1.0020428}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180.791, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7651912991025405667
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0efd09f44c334cc45abf43175b085d56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherMaterial: {fileID: 2100000, guid: f7804b0b3784fa943a415ff6cf3e57f7, type: 2}
+  otherMaterial: {fileID: 2100000, guid: 8313b7f851584554aa895abc637c721f, type: 2}
 --- !u!82 &3897291393152666293
 AudioSource:
   m_ObjectHideFlags: 0
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0755a2ba17a31d643b4a27e3034d8a79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: a6e6cb127e7044a3eaa8772d8a314706, type: 3}
+  sound: {fileID: 8300000, guid: a6d54794b4ce94de1b7b1587af379192, type: 3}
   volume: 1
   randomPitchVariance: 0
 --- !u!54 &1285680996915895099
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_HoverEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6543771468186577129}
         m_TargetAssemblyTypeName: ChangeMaterial, Assembly-CSharp
         m_MethodName: SetOtherMaterial
         m_Mode: 1
@@ -313,7 +313,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5236936894090653703}
         m_TargetAssemblyTypeName: PlayQuickSound, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
@@ -327,7 +327,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpdateMass, Assembly-CSharp
-        m_MethodName: increaseMass
+        m_MethodName: decreateMass
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -339,7 +339,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpdateMass, Assembly-CSharp
-        m_MethodName: increaseMass
+        m_MethodName: decreateMass
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -351,7 +351,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpdateMass, Assembly-CSharp
-        m_MethodName: increaseMass
+        m_MethodName: decreateMass
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -363,7 +363,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpdateMass, Assembly-CSharp
-        m_MethodName: increaseMass
+        m_MethodName: decreateMass
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -375,7 +375,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpdateMass, Assembly-CSharp
-        m_MethodName: increaseMass
+        m_MethodName: decreateMass
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -387,7 +387,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpdateMass, Assembly-CSharp
-        m_MethodName: increaseMass
+        m_MethodName: decreateMass
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -400,7 +400,7 @@ MonoBehaviour:
   m_HoverExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6543771468186577129}
         m_TargetAssemblyTypeName: ChangeMaterial, Assembly-CSharp
         m_MethodName: SetOriginalMaterial
         m_Mode: 1
@@ -465,7 +465,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpdateMass, Assembly-CSharp
-        m_MethodName: increaseMass
+        m_MethodName: decreateMass
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -477,7 +477,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpdateMass, Assembly-CSharp
-        m_MethodName: increaseMass
+        m_MethodName: decreateMass
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -489,7 +489,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpdateMass, Assembly-CSharp
-        m_MethodName: increaseMass
+        m_MethodName: decreateMass
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -501,7 +501,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpdateMass, Assembly-CSharp
-        m_MethodName: increaseMass
+        m_MethodName: decreateMass
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -513,7 +513,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpdateMass, Assembly-CSharp
-        m_MethodName: increaseMass
+        m_MethodName: decreateMass
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -525,7 +525,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpdateMass, Assembly-CSharp
-        m_MethodName: increaseMass
+        m_MethodName: decreateMass
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

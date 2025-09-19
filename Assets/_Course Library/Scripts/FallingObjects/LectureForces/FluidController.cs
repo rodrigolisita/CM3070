@@ -12,7 +12,7 @@ public class FluidController : MonoBehaviour
     [System.Serializable]
     public class Fluid
     {
-        public LocalizedString name; // <-- The key change is here
+        public LocalizedString name; //
         public float density; // in kg/m³
     }
 
