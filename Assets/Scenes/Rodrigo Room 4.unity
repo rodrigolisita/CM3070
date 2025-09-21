@@ -4670,8 +4670,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1567983925}
-        m_TargetAssemblyTypeName: CFD_DataSource, Assembly-CSharp
+      - m_Target: {fileID: 1567983936}
+        m_TargetAssemblyTypeName: CFD_DataProvider, Assembly-CSharp
         m_MethodName: OnSimulationSelected
         m_Mode: 1
         m_Arguments:
